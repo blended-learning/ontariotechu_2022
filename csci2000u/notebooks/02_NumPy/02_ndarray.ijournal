@@ -1,0 +1,978 @@
+{
+    "metadata": {
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "journal": {
+            "type": "journal",
+            "children": [
+                "2cb870f3-b339-4646-aaf4-0e3d839acde2",
+                "98648dd1-0353-423b-b6da-b2a90d75c1bd",
+                "1c24fe01-ff5b-4d94-be80-63c24849312d"
+            ],
+            "author": "02_NumPy/02_ndarray"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "2cb870f3-b339-4646-aaf4-0e3d839acde2": {
+            "id": "2cb870f3-b339-4646-aaf4-0e3d839acde2",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "4f3941b4-0eb5-4a67-8e23-b284ad4b5b2c",
+                        "3f54d0ec-29e4-4419-8399-616ac51022e3",
+                        "eda3c473-973b-4dce-8ff1-744b239b2dd4"
+                    ]
+                }
+            },
+            "source": "What's a NDArray?"
+        },
+        "4f3941b4-0eb5-4a67-8e23-b284ad4b5b2c": {
+            "id": "4f3941b4-0eb5-4a67-8e23-b284ad4b5b2c",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "60dd8850-f323-4f6b-90e7-eefadd62fb5f",
+                        "b1ddb44c-6993-4912-9bd4-efa184d00785"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "60dd8850-f323-4f6b-90e7-eefadd62fb5f": {
+            "id": "60dd8850-f323-4f6b-90e7-eefadd62fb5f",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "a90cb849-2658-4262-bb10-ba44dbf011f5"
+                    ]
+                }
+            }
+        },
+        "b1ddb44c-6993-4912-9bd4-efa184d00785": {
+            "id": "b1ddb44c-6993-4912-9bd4-efa184d00785",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "2897ef00-ac66-49fa-9046-8d43655d9899"
+                    ]
+                }
+            }
+        },
+        "a90cb849-2658-4262-bb10-ba44dbf011f5": {
+            "id": "a90cb849-2658-4262-bb10-ba44dbf011f5",
+            "cell_type": "markdown",
+            "source": "A N-dimensional array (ndarray) is a NumPy native data structure for storage of (very) large multidimensional arrays of numerical* scalars.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "2897ef00-ac66-49fa-9046-8d43655d9899": {
+            "id": "2897ef00-ac66-49fa-9046-8d43655d9899",
+            "cell_type": "code",
+            "source": "import numpy as np\n\ndata = np.random.randn(2, 3)\n\ndata",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 1,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([[-1.16682175,  1.29210632,  1.3233623 ],\n       [-0.82506411, -0.51882866, -1.23620788]])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 1
+        },
+        "3f54d0ec-29e4-4419-8399-616ac51022e3": {
+            "id": "3f54d0ec-29e4-4419-8399-616ac51022e3",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "2cd0939f-f021-4b78-9e92-10589e618a02",
+                        "7ebc9dd4-ba30-4779-8e9e-68c0c7642368",
+                        "6fe3d5b5-a36a-45f4-912a-c6689ea43bea",
+                        "eeaadd3c-1eb3-4bc6-98d1-4ae18cbe49b0"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "2cd0939f-f021-4b78-9e92-10589e618a02": {
+            "id": "2cd0939f-f021-4b78-9e92-10589e618a02",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "aa370bd8-a8c1-46a0-8ed7-726276cd6668"
+                    ]
+                }
+            }
+        },
+        "7ebc9dd4-ba30-4779-8e9e-68c0c7642368": {
+            "id": "7ebc9dd4-ba30-4779-8e9e-68c0c7642368",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "92fde6df-b2f1-4c5d-a399-0b7439313464"
+                    ]
+                }
+            }
+        },
+        "aa370bd8-a8c1-46a0-8ed7-726276cd6668": {
+            "id": "aa370bd8-a8c1-46a0-8ed7-726276cd6668",
+            "cell_type": "markdown",
+            "source": "We can write mathematical operations",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "92fde6df-b2f1-4c5d-a399-0b7439313464": {
+            "id": "92fde6df-b2f1-4c5d-a399-0b7439313464",
+            "cell_type": "code",
+            "source": "data * 10",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 2,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([[-11.6682175 ,  12.92106321,  13.233623  ],\n       [ -8.25064108,  -5.18828661, -12.36207877]])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 2
+        },
+        "6fe3d5b5-a36a-45f4-912a-c6689ea43bea": {
+            "id": "6fe3d5b5-a36a-45f4-912a-c6689ea43bea",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": []
+                }
+            }
+        },
+        "eeaadd3c-1eb3-4bc6-98d1-4ae18cbe49b0": {
+            "id": "eeaadd3c-1eb3-4bc6-98d1-4ae18cbe49b0",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "86b2f84c-01a9-4cfc-9366-eef61f3a875a"
+                    ]
+                }
+            }
+        },
+        "86b2f84c-01a9-4cfc-9366-eef61f3a875a": {
+            "id": "86b2f84c-01a9-4cfc-9366-eef61f3a875a",
+            "cell_type": "code",
+            "source": "data + data",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 3,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([[-2.3336435 ,  2.58421264,  2.6467246 ],\n       [-1.65012822, -1.03765732, -2.47241575]])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 3
+        },
+        "eda3c473-973b-4dce-8ff1-744b239b2dd4": {
+            "id": "eda3c473-973b-4dce-8ff1-744b239b2dd4",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "a07c8583-44b8-477d-9deb-8e076707da27",
+                        "96c34fbd-bf07-4b33-a342-e2c214448b03",
+                        "0cba32b1-3e8b-49bf-98d8-471483f2846a",
+                        "3671c79c-c007-4cce-8769-58f2fc94dda0",
+                        "5f233d7e-8a1f-41d2-812f-036543cbb3f9",
+                        "1f396d2e-9a68-4a68-82a9-52724960f5ec"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "a07c8583-44b8-477d-9deb-8e076707da27": {
+            "id": "a07c8583-44b8-477d-9deb-8e076707da27",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "b7b6caea-a060-444c-aefc-038a8e47a6fc"
+                    ]
+                }
+            }
+        },
+        "96c34fbd-bf07-4b33-a342-e2c214448b03": {
+            "id": "96c34fbd-bf07-4b33-a342-e2c214448b03",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "06dd2d3e-977a-4ac4-a57e-0ca74460f830"
+                    ]
+                }
+            }
+        },
+        "b7b6caea-a060-444c-aefc-038a8e47a6fc": {
+            "id": "b7b6caea-a060-444c-aefc-038a8e47a6fc",
+            "cell_type": "markdown",
+            "source": "Each NDArray is characterized by:\n\n1. the number of axes\n1. shape\n2. data type of its elements",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "06dd2d3e-977a-4ac4-a57e-0ca74460f830": {
+            "id": "06dd2d3e-977a-4ac4-a57e-0ca74460f830",
+            "cell_type": "code",
+            "source": "#\n# the number of axes\n#\ndata.ndim",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 5,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "2"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 5
+        },
+        "0cba32b1-3e8b-49bf-98d8-471483f2846a": {
+            "id": "0cba32b1-3e8b-49bf-98d8-471483f2846a",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": []
+                }
+            }
+        },
+        "3671c79c-c007-4cce-8769-58f2fc94dda0": {
+            "id": "3671c79c-c007-4cce-8769-58f2fc94dda0",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "ea1bdf16-9491-4c5e-8f26-5dae692588b7"
+                    ]
+                }
+            }
+        },
+        "ea1bdf16-9491-4c5e-8f26-5dae692588b7": {
+            "id": "ea1bdf16-9491-4c5e-8f26-5dae692588b7",
+            "cell_type": "code",
+            "source": "#\n# the shape\n#\ndata.shape",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 6,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "(2, 3)"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 6
+        },
+        "5f233d7e-8a1f-41d2-812f-036543cbb3f9": {
+            "id": "5f233d7e-8a1f-41d2-812f-036543cbb3f9",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": []
+                }
+            }
+        },
+        "1f396d2e-9a68-4a68-82a9-52724960f5ec": {
+            "id": "1f396d2e-9a68-4a68-82a9-52724960f5ec",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "75711081-c0c0-448a-b37c-1cc9afe787f2"
+                    ]
+                }
+            }
+        },
+        "75711081-c0c0-448a-b37c-1cc9afe787f2": {
+            "id": "75711081-c0c0-448a-b37c-1cc9afe787f2",
+            "cell_type": "code",
+            "source": "#\n# the datatype\n#\ndata.dtype",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 7,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "dtype('float64')"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 7
+        },
+        "98648dd1-0353-423b-b6da-b2a90d75c1bd": {
+            "id": "98648dd1-0353-423b-b6da-b2a90d75c1bd",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "10cc9fbe-0332-4591-b860-ef5bc1ab7be9",
+                        "fa60c0f5-7147-48a1-ade8-88bd0ad2923d",
+                        "4a97c15d-68d5-4785-8277-a822621ffadc",
+                        "3437df9a-e96d-4706-96f1-55378e0789e5"
+                    ]
+                }
+            },
+            "source": "Creating NDArray"
+        },
+        "10cc9fbe-0332-4591-b860-ef5bc1ab7be9": {
+            "id": "10cc9fbe-0332-4591-b860-ef5bc1ab7be9",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "dd49a947-dc6a-4e25-a614-5610af62bea7",
+                        "8e4be801-d73d-41ca-98af-040adc7c7a4c"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "dd49a947-dc6a-4e25-a614-5610af62bea7": {
+            "id": "dd49a947-dc6a-4e25-a614-5610af62bea7",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "9d9774ad-e88a-415b-8b97-5a5730ea7d9b"
+                    ]
+                }
+            }
+        },
+        "8e4be801-d73d-41ca-98af-040adc7c7a4c": {
+            "id": "8e4be801-d73d-41ca-98af-040adc7c7a4c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "91f13401-d3e8-465c-bb78-b92f3328a130"
+                    ]
+                }
+            }
+        },
+        "9d9774ad-e88a-415b-8b97-5a5730ea7d9b": {
+            "id": "9d9774ad-e88a-415b-8b97-5a5730ea7d9b",
+            "cell_type": "markdown",
+            "source": "From Python lists",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "91f13401-d3e8-465c-bb78-b92f3328a130": {
+            "id": "91f13401-d3e8-465c-bb78-b92f3328a130",
+            "cell_type": "code",
+            "source": "pydata = [\n    [1, 2, 3, 4],\n    [5, 6, 7, 8],\n]\n\nnp.array(pydata)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 8,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([[1, 2, 3, 4],\n       [5, 6, 7, 8]])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 8
+        },
+        "fa60c0f5-7147-48a1-ade8-88bd0ad2923d": {
+            "id": "fa60c0f5-7147-48a1-ade8-88bd0ad2923d",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "a561789b-9274-415d-aeaf-7c265901b5b3",
+                        "22a32f77-a760-496a-b2be-c5fe67625650"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "a561789b-9274-415d-aeaf-7c265901b5b3": {
+            "id": "a561789b-9274-415d-aeaf-7c265901b5b3",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1986819c-0a6a-4043-b6a5-dad142fd72da"
+                    ]
+                }
+            }
+        },
+        "22a32f77-a760-496a-b2be-c5fe67625650": {
+            "id": "22a32f77-a760-496a-b2be-c5fe67625650",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "d5fc0c17-80a7-4e90-9b27-60da565633e3"
+                    ]
+                }
+            }
+        },
+        "1986819c-0a6a-4043-b6a5-dad142fd72da": {
+            "id": "1986819c-0a6a-4043-b6a5-dad142fd72da",
+            "cell_type": "markdown",
+            "source": "Zeros of arbitrary shape",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "d5fc0c17-80a7-4e90-9b27-60da565633e3": {
+            "id": "d5fc0c17-80a7-4e90-9b27-60da565633e3",
+            "cell_type": "code",
+            "source": "np.zeros((3, 2))",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 10,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([[0., 0.],\n       [0., 0.],\n       [0., 0.]])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 10
+        },
+        "4a97c15d-68d5-4785-8277-a822621ffadc": {
+            "id": "4a97c15d-68d5-4785-8277-a822621ffadc",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "62fbc7bc-c64c-4335-9c9c-bf433f277782",
+                        "f29b485f-1074-4fe7-a8f0-90a83e049750"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "62fbc7bc-c64c-4335-9c9c-bf433f277782": {
+            "id": "62fbc7bc-c64c-4335-9c9c-bf433f277782",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "9f1348b8-1d34-4fc1-8ed1-3f116ba8cdb3"
+                    ]
+                }
+            }
+        },
+        "f29b485f-1074-4fe7-a8f0-90a83e049750": {
+            "id": "f29b485f-1074-4fe7-a8f0-90a83e049750",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "056c3a96-b5eb-4523-b165-4fbdd6b092a4"
+                    ]
+                }
+            }
+        },
+        "9f1348b8-1d34-4fc1-8ed1-3f116ba8cdb3": {
+            "id": "9f1348b8-1d34-4fc1-8ed1-3f116ba8cdb3",
+            "cell_type": "markdown",
+            "source": "Ones of arbitrary shape",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "056c3a96-b5eb-4523-b165-4fbdd6b092a4": {
+            "id": "056c3a96-b5eb-4523-b165-4fbdd6b092a4",
+            "cell_type": "code",
+            "source": "np.ones((3, 2))",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 11,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([[1., 1.],\n       [1., 1.],\n       [1., 1.]])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 11
+        },
+        "1c24fe01-ff5b-4d94-be80-63c24849312d": {
+            "id": "1c24fe01-ff5b-4d94-be80-63c24849312d",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "183056a0-190b-4132-bd86-7a5b433c0dcd",
+                        "e7366ed5-ec2c-4b35-a51b-dfa759535ead"
+                    ]
+                }
+            },
+            "source": "More about data type"
+        },
+        "3437df9a-e96d-4706-96f1-55378e0789e5": {
+            "id": "3437df9a-e96d-4706-96f1-55378e0789e5",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "6b50b60b-db19-4290-9a57-46e40d3ebdde",
+                        "ce78a778-82fd-43a5-b33c-1d48e78e28a8"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "6b50b60b-db19-4290-9a57-46e40d3ebdde": {
+            "id": "6b50b60b-db19-4290-9a57-46e40d3ebdde",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "260473b1-2bc7-4f23-9f29-a709285df42a"
+                    ]
+                }
+            }
+        },
+        "ce78a778-82fd-43a5-b33c-1d48e78e28a8": {
+            "id": "ce78a778-82fd-43a5-b33c-1d48e78e28a8",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "8b5bbe92-ac94-4e3a-b826-1063d570fd47"
+                    ]
+                }
+            }
+        },
+        "260473b1-2bc7-4f23-9f29-a709285df42a": {
+            "id": "260473b1-2bc7-4f23-9f29-a709285df42a",
+            "cell_type": "markdown",
+            "source": "A sequence",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "8b5bbe92-ac94-4e3a-b826-1063d570fd47": {
+            "id": "8b5bbe92-ac94-4e3a-b826-1063d570fd47",
+            "cell_type": "code",
+            "source": "np.arange(10)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 12,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 12
+        },
+        "183056a0-190b-4132-bd86-7a5b433c0dcd": {
+            "id": "183056a0-190b-4132-bd86-7a5b433c0dcd",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "19c36325-53ae-4f1f-8059-dcd68143d6f0",
+                        "531cb2f4-5612-4594-b620-909d4e10a2ab"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "19c36325-53ae-4f1f-8059-dcd68143d6f0": {
+            "id": "19c36325-53ae-4f1f-8059-dcd68143d6f0",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "01bb37ab-8d32-43fc-b42d-bb826dc4d8f9"
+                    ]
+                }
+            }
+        },
+        "531cb2f4-5612-4594-b620-909d4e10a2ab": {
+            "id": "531cb2f4-5612-4594-b620-909d4e10a2ab",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "3a467fb0-be7f-49f2-bf23-d9d2d00f3990"
+                    ]
+                }
+            }
+        },
+        "01bb37ab-8d32-43fc-b42d-bb826dc4d8f9": {
+            "id": "01bb37ab-8d32-43fc-b42d-bb826dc4d8f9",
+            "cell_type": "markdown",
+            "source": "`ndarray` can store more than just floating numbers:\n\n- small to large integers (8, 16, 32, 64 bits)\n- signed and unsigned integers\n- small to large floats (16, 32, 64 bits)\n- bool\n- object",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "3a467fb0-be7f-49f2-bf23-d9d2d00f3990": {
+            "id": "3a467fb0-be7f-49f2-bf23-d9d2d00f3990",
+            "cell_type": "code",
+            "source": "arr = np.array([\"hello\", \"world\"], dtype='object')\narr",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 16,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array(['hello', 'world'], dtype=object)"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 16
+        },
+        "e7366ed5-ec2c-4b35-a51b-dfa759535ead": {
+            "id": "e7366ed5-ec2c-4b35-a51b-dfa759535ead",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "e222163f-e5b2-4cbf-9256-dbd6eea59641",
+                        "3d4b9d2f-63cc-4389-ba97-1a82bbd43547",
+                        "3e1c962f-31cd-4fce-a630-1904408fa41e",
+                        "9e384f8e-438d-4243-b827-0353e903a859"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "e222163f-e5b2-4cbf-9256-dbd6eea59641": {
+            "id": "e222163f-e5b2-4cbf-9256-dbd6eea59641",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "07a4fb8b-648c-46fd-a724-f89e08c678e9"
+                    ]
+                }
+            }
+        },
+        "3d4b9d2f-63cc-4389-ba97-1a82bbd43547": {
+            "id": "3d4b9d2f-63cc-4389-ba97-1a82bbd43547",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "00ff0c87-c69b-4f30-8341-f40073095c31"
+                    ]
+                }
+            }
+        },
+        "07a4fb8b-648c-46fd-a724-f89e08c678e9": {
+            "id": "07a4fb8b-648c-46fd-a724-f89e08c678e9",
+            "cell_type": "markdown",
+            "source": "We can perform type conversion.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "00ff0c87-c69b-4f30-8341-f40073095c31": {
+            "id": "00ff0c87-c69b-4f30-8341-f40073095c31",
+            "cell_type": "code",
+            "source": "a = np.array([1,2,3,4])\na",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 17,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([1, 2, 3, 4])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 17
+        },
+        "3e1c962f-31cd-4fce-a630-1904408fa41e": {
+            "id": "3e1c962f-31cd-4fce-a630-1904408fa41e",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6a2c3c4e-bb61-4400-a24a-81a600d540cf"
+                    ]
+                }
+            }
+        },
+        "9e384f8e-438d-4243-b827-0353e903a859": {
+            "id": "9e384f8e-438d-4243-b827-0353e903a859",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "ac04102c-1a42-4892-bc27-db3ebc5cbbf9"
+                    ]
+                }
+            }
+        },
+        "ac04102c-1a42-4892-bc27-db3ebc5cbbf9": {
+            "id": "ac04102c-1a42-4892-bc27-db3ebc5cbbf9",
+            "cell_type": "code",
+            "source": "b = a.astype('float16')\nb",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 22,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "array([1., 2., 3., 4.], dtype=float16)"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 22
+        },
+        "6a2c3c4e-bb61-4400-a24a-81a600d540cf": {
+            "id": "6a2c3c4e-bb61-4400-a24a-81a600d540cf",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,587 @@
+{
+    "metadata": {
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "journal": {
+            "type": "journal",
+            "children": [
+                "1fee2fcd-fc28-4fdc-800c-24184bcd1efa",
+                "465a91d4-17fd-4bae-a10f-0294b1960f8c",
+                "983043fe-5f0a-4a44-8cd2-285466c3b238"
+            ],
+            "author": "Ken Pu, 2022"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "1fee2fcd-fc28-4fdc-800c-24184bcd1efa": {
+            "id": "1fee2fcd-fc28-4fdc-800c-24184bcd1efa",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "8797a68b-2f0b-4bf5-a3ed-9878822641b3",
+                        "3239d38c-59cf-4dd8-a333-a36d0f51131c"
+                    ]
+                }
+            },
+            "source": "File System"
+        },
+        "8797a68b-2f0b-4bf5-a3ed-9878822641b3": {
+            "id": "8797a68b-2f0b-4bf5-a3ed-9878822641b3",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "98dff199-4790-4af5-b4f6-f0dbb057ed6f",
+                        "b7146ad1-82cb-4b37-8afd-f85b89002d7d"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "98dff199-4790-4af5-b4f6-f0dbb057ed6f": {
+            "id": "98dff199-4790-4af5-b4f6-f0dbb057ed6f",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "76f66209-8d77-46b8-920f-f44a00ba10a0"
+                    ]
+                }
+            }
+        },
+        "b7146ad1-82cb-4b37-8afd-f85b89002d7d": {
+            "id": "b7146ad1-82cb-4b37-8afd-f85b89002d7d",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1b121ca0-b777-4a8b-9b02-ca239f49d144"
+                    ]
+                }
+            }
+        },
+        "76f66209-8d77-46b8-920f-f44a00ba10a0": {
+            "id": "76f66209-8d77-46b8-920f-f44a00ba10a0",
+            "cell_type": "markdown",
+            "source": "Data is organized into a hierarchy of storage units:\n\n- Data is stored in _files_.\n- Files are organized into directories.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "1b121ca0-b777-4a8b-9b02-ca239f49d144": {
+            "id": "1b121ca0-b777-4a8b-9b02-ca239f49d144",
+            "cell_type": "code",
+            "source": "%%bash\ndirectory='../../datasets'\ntree $directory",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "../../datasets\n└── kaggle\n    └── starbucks\n        └── directory.csv\n\n2 directories, 1 file\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 19
+        },
+        "3239d38c-59cf-4dd8-a333-a36d0f51131c": {
+            "id": "3239d38c-59cf-4dd8-a333-a36d0f51131c",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "90a8cde0-0a8a-4a06-9bef-74fc5a29c1e9",
+                        "a4f1f50c-92f1-4088-86f5-20ea6cdfd5b9"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "90a8cde0-0a8a-4a06-9bef-74fc5a29c1e9": {
+            "id": "90a8cde0-0a8a-4a06-9bef-74fc5a29c1e9",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6a54146c-8549-48e1-8815-e633de5cc6ea"
+                    ]
+                }
+            }
+        },
+        "a4f1f50c-92f1-4088-86f5-20ea6cdfd5b9": {
+            "id": "a4f1f50c-92f1-4088-86f5-20ea6cdfd5b9",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "a4bf748f-a73d-4e55-9024-d157016e41cd"
+                    ]
+                }
+            }
+        },
+        "6a54146c-8549-48e1-8815-e633de5cc6ea": {
+            "id": "6a54146c-8549-48e1-8815-e633de5cc6ea",
+            "cell_type": "markdown",
+            "source": "We identify a directory or a file by its __path__.\n\nIn Python, paths can be stored as strings.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "a4bf748f-a73d-4e55-9024-d157016e41cd": {
+            "id": "a4bf748f-a73d-4e55-9024-d157016e41cd",
+            "cell_type": "code",
+            "source": "#\n# This is the directory that contains the datasets\n# we use throughout this course.\n#\n\ndirectory = '../../datasets'",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 20
+        },
+        "465a91d4-17fd-4bae-a10f-0294b1960f8c": {
+            "id": "465a91d4-17fd-4bae-a10f-0294b1960f8c",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "1c546ab1-be82-4ad6-b8df-ec99703f3385",
+                        "2af7e94e-2fd4-4446-a881-6de4bd163159"
+                    ]
+                }
+            },
+            "source": "Listing content of a directory"
+        },
+        "1c546ab1-be82-4ad6-b8df-ec99703f3385": {
+            "id": "1c546ab1-be82-4ad6-b8df-ec99703f3385",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "25d95be9-1de6-4b05-b207-2152c6a4c1a0",
+                        "2ac2b58b-adf1-4b17-8247-003bcbf10195"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "25d95be9-1de6-4b05-b207-2152c6a4c1a0": {
+            "id": "25d95be9-1de6-4b05-b207-2152c6a4c1a0",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "a445ff62-c1cf-432d-a91c-d461f80d1410"
+                    ]
+                }
+            }
+        },
+        "2ac2b58b-adf1-4b17-8247-003bcbf10195": {
+            "id": "2ac2b58b-adf1-4b17-8247-003bcbf10195",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "646062e6-dfb6-49ed-bc16-efa486a9533a"
+                    ]
+                }
+            }
+        },
+        "a445ff62-c1cf-432d-a91c-d461f80d1410": {
+            "id": "a445ff62-c1cf-432d-a91c-d461f80d1410",
+            "cell_type": "markdown",
+            "source": "The `os` package provides a number of modules and functions to navigate the filesystem.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "646062e6-dfb6-49ed-bc16-efa486a9533a": {
+            "id": "646062e6-dfb6-49ed-bc16-efa486a9533a",
+            "cell_type": "code",
+            "source": "import os\n\ncontent = os.listdir(directory)\ncontent",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 21,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "['kaggle']"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 21
+        },
+        "2af7e94e-2fd4-4446-a881-6de4bd163159": {
+            "id": "2af7e94e-2fd4-4446-a881-6de4bd163159",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "20ef6709-746b-411e-9cf5-fa011c37ec55",
+                        "583ee0ab-88b1-403d-ac22-7b255e80a4be"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "20ef6709-746b-411e-9cf5-fa011c37ec55": {
+            "id": "20ef6709-746b-411e-9cf5-fa011c37ec55",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1723f66b-09dc-4ffe-964e-4bb9ea215e33"
+                    ]
+                }
+            }
+        },
+        "583ee0ab-88b1-403d-ac22-7b255e80a4be": {
+            "id": "583ee0ab-88b1-403d-ac22-7b255e80a4be",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f56b0c5d-f758-443e-99b3-5d41b296027d"
+                    ]
+                }
+            }
+        },
+        "1723f66b-09dc-4ffe-964e-4bb9ea215e33": {
+            "id": "1723f66b-09dc-4ffe-964e-4bb9ea215e33",
+            "cell_type": "markdown",
+            "source": "Check if a path is a file or a directory.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "f56b0c5d-f758-443e-99b3-5d41b296027d": {
+            "id": "f56b0c5d-f758-443e-99b3-5d41b296027d",
+            "cell_type": "code",
+            "source": "os.path.isdir(directory)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 22,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "True"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 22
+        },
+        "983043fe-5f0a-4a44-8cd2-285466c3b238": {
+            "id": "983043fe-5f0a-4a44-8cd2-285466c3b238",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "a5f540ff-323c-498a-adab-2fe60770c6ef",
+                        "322ff010-dc87-4d2b-8049-81ae8c858df1",
+                        "83abe8e0-77b8-4845-bb23-7dab4a5451be"
+                    ]
+                }
+            },
+            "source": "Accessing File Content"
+        },
+        "a5f540ff-323c-498a-adab-2fe60770c6ef": {
+            "id": "a5f540ff-323c-498a-adab-2fe60770c6ef",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "b09269c4-4ccc-4d1b-acc3-ea043650741d",
+                        "4bacb51a-7bb3-4c39-8780-789ee54d8e74"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "b09269c4-4ccc-4d1b-acc3-ea043650741d": {
+            "id": "b09269c4-4ccc-4d1b-acc3-ea043650741d",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "16732400-9429-4604-9e5b-cc12056a7bb5"
+                    ]
+                }
+            }
+        },
+        "4bacb51a-7bb3-4c39-8780-789ee54d8e74": {
+            "id": "4bacb51a-7bb3-4c39-8780-789ee54d8e74",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "ac043f77-7262-4d8c-b643-f34c616a9750"
+                    ]
+                }
+            }
+        },
+        "16732400-9429-4604-9e5b-cc12056a7bb5": {
+            "id": "16732400-9429-4604-9e5b-cc12056a7bb5",
+            "cell_type": "markdown",
+            "source": "Python provides a _built-in_ file `open` to access the content of a file.\n\nWhen reading a file, we can do it in two ways:\n\n- text mode (default)\n- binary mode",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "ac043f77-7262-4d8c-b643-f34c616a9750": {
+            "id": "ac043f77-7262-4d8c-b643-f34c616a9750",
+            "cell_type": "code",
+            "source": "file = open(\n    os.path.join(directory,\n                 'kaggle/starbucks',\n                 'directory.csv'),\n    'r')\n\n#\n# Print the first 10 lines.\n# Print only the first 60 characters of each line.\n#\nfor i in range(10):\n    line = file.readline().strip()\n    print(line[:60])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "Brand,Store Number,Store Name,Ownership Type,Street Address,\nStarbucks,47370-257954,\"Meritxell, 96\",Licensed,\"Av. Meritxe\nStarbucks,22331-212325,Ajman Drive Thru,Licensed,\"1 Street 6\nStarbucks,47089-256771,Dana Mall,Licensed,Sheikh Khalifa Bin\nStarbucks,22126-218024,Twofour 54,Licensed,Al Salam Street,A\nStarbucks,17127-178586,Al Ain Tower,Licensed,\"Khaldiya Area,\nStarbucks,17688-182164,\"Dalma Mall, Ground Floor\",Licensed,\"\nStarbucks,18182-182165,\"Dalma Mall, Level 1\",Licensed,\"Dalma\nStarbucks,23359-229184,Debenhams Yas Mall,Licensed,Yas Islan\nStarbucks,30781-99022,Khalidiya Street,Licensed,Khalidiya St\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 23
+        },
+        "83abe8e0-77b8-4845-bb23-7dab4a5451be": {
+            "id": "83abe8e0-77b8-4845-bb23-7dab4a5451be",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "63a32996-4908-49dd-b913-efb7e92ff4af",
+                        "fb03c20d-c0e2-455d-ade8-a4a7d9f07d02"
+                    ],
+                    "layout": "columns"
+                }
+            },
+            "source": "This is a row"
+        },
+        "63a32996-4908-49dd-b913-efb7e92ff4af": {
+            "id": "63a32996-4908-49dd-b913-efb7e92ff4af",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f1f197e3-0bec-4ee8-97a5-febd2853dea1"
+                    ]
+                }
+            }
+        },
+        "fb03c20d-c0e2-455d-ade8-a4a7d9f07d02": {
+            "id": "fb03c20d-c0e2-455d-ade8-a4a7d9f07d02",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "a0ad78b8-6f13-4df6-b290-b429e05dc9bb"
+                    ]
+                }
+            }
+        },
+        "f1f197e3-0bec-4ee8-97a5-febd2853dea1": {
+            "id": "f1f197e3-0bec-4ee8-97a5-febd2853dea1",
+            "cell_type": "markdown",
+            "source": "Python makes reading files easy with its rich set of data structures.\n\nThis is a quick way of getting line count of a file.\n\nIf we use the `with` block to open a file,\nPython ensures that all file objects created by the `with` statement will be immediately closed at the end of the `with` block.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "a0ad78b8-6f13-4df6-b290-b429e05dc9bb": {
+            "id": "a0ad78b8-6f13-4df6-b290-b429e05dc9bb",
+            "cell_type": "code",
+            "source": "filepath = os.path.join(directory, 'kaggle/starbucks/directory.csv')\nwith open(filepath) as f:\n    print(\"Number of lines:\", len(f.readlines()))",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "Number of lines: 25602\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 25
+        },
+        "322ff010-dc87-4d2b-8049-81ae8c858df1": {
+            "id": "322ff010-dc87-4d2b-8049-81ae8c858df1",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "3bf26070-6a68-4046-aa24-ea2fef5aaf65",
+                        "0a2c70ff-5a35-4142-a6c5-b7e18d82e520"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "0a2c70ff-5a35-4142-a6c5-b7e18d82e520": {
+            "id": "0a2c70ff-5a35-4142-a6c5-b7e18d82e520",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "b3afcc73-cfab-482a-badc-fa9076745756"
+                    ]
+                }
+            }
+        },
+        "3bf26070-6a68-4046-aa24-ea2fef5aaf65": {
+            "id": "3bf26070-6a68-4046-aa24-ea2fef5aaf65",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6d58649e-8ee8-4019-88a9-bc5f7f2035b3"
+                    ]
+                }
+            }
+        },
+        "6d58649e-8ee8-4019-88a9-bc5f7f2035b3": {
+            "id": "6d58649e-8ee8-4019-88a9-bc5f7f2035b3",
+            "cell_type": "markdown",
+            "source": "An _opened_ file object holds on to precious system resource, known as file descriptors deep inside the operating system.  A single process can only open 1024 files simultaneously.\n\nSo, it's important to close the file object when we are done.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "b3afcc73-cfab-482a-badc-fa9076745756": {
+            "id": "b3afcc73-cfab-482a-badc-fa9076745756",
+            "cell_type": "code",
+            "source": "file.close()",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 24
+        }
+    }
+}

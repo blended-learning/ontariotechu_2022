@@ -1,0 +1,682 @@
+{
+    "metadata": {
+        "journal": {
+            "type": "journal",
+            "children": [
+                "62444b04-73de-41d1-93af-de20ea664217",
+                "96f71f1d-12a4-489c-8575-233f7a21c9b0",
+                "703eef77-e63d-4509-838a-58adb0441ba2",
+                "1e022661-f712-44ac-8789-ca5ce6df0e66",
+                "e2f9d5f7-19a9-4b02-b3c9-2312a255ecc0"
+            ],
+            "author": "Ken Pu"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "62444b04-73de-41d1-93af-de20ea664217": {
+            "id": "62444b04-73de-41d1-93af-de20ea664217",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "031024b4-ebb2-424d-a992-8e2614d34d57"
+                    ]
+                }
+            },
+            "source": "A motivating example"
+        },
+        "031024b4-ebb2-424d-a992-8e2614d34d57": {
+            "id": "031024b4-ebb2-424d-a992-8e2614d34d57",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "97bebdee-7456-41e5-b4ba-c2c5f5c2dd0a"
+                    ],
+                    "layout": "single"
+                }
+            },
+            "source": "This is a row"
+        },
+        "97bebdee-7456-41e5-b4ba-c2c5f5c2dd0a": {
+            "id": "97bebdee-7456-41e5-b4ba-c2c5f5c2dd0a",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "19eb193c-7d3f-4d3a-b226-f40f95ac59b5"
+                    ]
+                }
+            }
+        },
+        "19eb193c-7d3f-4d3a-b226-f40f95ac59b5": {
+            "id": "19eb193c-7d3f-4d3a-b226-f40f95ac59b5",
+            "cell_type": "markdown",
+            "source": "Consider the problem of finding the average of squares of a (large) list of numbers.\n\n**Input**:\n\n- $X = [x_1, x_2, \\dots, x_n]$\n\n**Output**:\n\n- $\\mathrm{answer} = \\frac{1}{n}\\sum_{i} x_i^2$",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "96f71f1d-12a4-489c-8575-233f7a21c9b0": {
+            "id": "96f71f1d-12a4-489c-8575-233f7a21c9b0",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "b318ac71-4c28-4d19-9946-2215dd5328c9",
+                        "092db6ea-e67d-4c4b-ba25-e30ccf7b10f8"
+                    ]
+                }
+            },
+            "source": "A naive implementation using pure Python"
+        },
+        "b318ac71-4c28-4d19-9946-2215dd5328c9": {
+            "id": "b318ac71-4c28-4d19-9946-2215dd5328c9",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "ffceb0a4-5019-4daf-90db-a1b8882cc032",
+                        "93a44199-a3ce-4e87-8a68-eea7590e2440"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "ffceb0a4-5019-4daf-90db-a1b8882cc032": {
+            "id": "ffceb0a4-5019-4daf-90db-a1b8882cc032",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1e652029-932c-4494-b067-07dc9b8da336"
+                    ]
+                }
+            }
+        },
+        "93a44199-a3ce-4e87-8a68-eea7590e2440": {
+            "id": "93a44199-a3ce-4e87-8a68-eea7590e2440",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "960d45a8-d20d-4dba-a77a-44dad3c28af8"
+                    ]
+                }
+            }
+        },
+        "1e652029-932c-4494-b067-07dc9b8da336": {
+            "id": "1e652029-932c-4494-b067-07dc9b8da336",
+            "cell_type": "markdown",
+            "source": "We use Python lists.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "960d45a8-d20d-4dba-a77a-44dad3c28af8": {
+            "id": "960d45a8-d20d-4dba-a77a-44dad3c28af8",
+            "cell_type": "code",
+            "source": "def mean_square_py(X):\n    answer = 0\n    for x in X:\n        answer += x ** 2\n    return answer / len(X)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 3
+        },
+        "092db6ea-e67d-4c4b-ba25-e30ccf7b10f8": {
+            "id": "092db6ea-e67d-4c4b-ba25-e30ccf7b10f8",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "2789b0c4-e76d-402f-ba7d-e50295e00961",
+                        "8c8c7e83-f08c-4b09-b096-36f67cf6e2fc"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "2789b0c4-e76d-402f-ba7d-e50295e00961": {
+            "id": "2789b0c4-e76d-402f-ba7d-e50295e00961",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "b1c778c9-f881-48d1-8177-5c4c9676c37f"
+                    ]
+                }
+            }
+        },
+        "8c8c7e83-f08c-4b09-b096-36f67cf6e2fc": {
+            "id": "8c8c7e83-f08c-4b09-b096-36f67cf6e2fc",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "ad3d4882-8ade-402d-8b32-734308a3cef0"
+                    ]
+                }
+            }
+        },
+        "b1c778c9-f881-48d1-8177-5c4c9676c37f": {
+            "id": "b1c778c9-f881-48d1-8177-5c4c9676c37f",
+            "cell_type": "markdown",
+            "source": "Let's test it out.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "ad3d4882-8ade-402d-8b32-734308a3cef0": {
+            "id": "ad3d4882-8ade-402d-8b32-734308a3cef0",
+            "cell_type": "code",
+            "source": "mean_square_py([1, 2, 3])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 4,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "4.666666666666667"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 4
+        },
+        "703eef77-e63d-4509-838a-58adb0441ba2": {
+            "id": "703eef77-e63d-4509-838a-58adb0441ba2",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "cd9f5dc8-3724-4dce-8558-ac6b987becfa",
+                        "00f75815-7cae-439c-aaa3-9ca4efd4533e"
+                    ]
+                }
+            },
+            "source": "Performance evaluation"
+        },
+        "cd9f5dc8-3724-4dce-8558-ac6b987becfa": {
+            "id": "cd9f5dc8-3724-4dce-8558-ac6b987becfa",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "16932355-2e6d-4a74-9129-a4fa431b6612",
+                        "8913a5d9-a448-4430-8f0e-7ee89a4471f4"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "16932355-2e6d-4a74-9129-a4fa431b6612": {
+            "id": "16932355-2e6d-4a74-9129-a4fa431b6612",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "ac7eddf1-0311-4b73-b8a7-492065c67ecb"
+                    ]
+                }
+            }
+        },
+        "8913a5d9-a448-4430-8f0e-7ee89a4471f4": {
+            "id": "8913a5d9-a448-4430-8f0e-7ee89a4471f4",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "5f7781a9-2c9a-49af-bb7c-4a847f34a99e"
+                    ]
+                }
+            }
+        },
+        "ac7eddf1-0311-4b73-b8a7-492065c67ecb": {
+            "id": "ac7eddf1-0311-4b73-b8a7-492065c67ecb",
+            "cell_type": "markdown",
+            "source": "First, we need to generate a very large input list.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "5f7781a9-2c9a-49af-bb7c-4a847f34a99e": {
+            "id": "5f7781a9-2c9a-49af-bb7c-4a847f34a99e",
+            "cell_type": "code",
+            "source": "import random\n\nx_list = []\nfor i in range(1_000_000):\n    x_list.append(random.random())",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 5
+        },
+        "00f75815-7cae-439c-aaa3-9ca4efd4533e": {
+            "id": "00f75815-7cae-439c-aaa3-9ca4efd4533e",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "b8b121ab-40bd-4973-ad35-da4d9e97b1c8",
+                        "0424a35e-c336-471d-8dc4-d51235537299"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "b8b121ab-40bd-4973-ad35-da4d9e97b1c8": {
+            "id": "b8b121ab-40bd-4973-ad35-da4d9e97b1c8",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "42bae632-9dfc-4529-9828-f51e09b95e58"
+                    ]
+                }
+            }
+        },
+        "0424a35e-c336-471d-8dc4-d51235537299": {
+            "id": "0424a35e-c336-471d-8dc4-d51235537299",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "0ece955e-38a4-4ad9-82ad-0491833a29dd"
+                    ]
+                }
+            }
+        },
+        "42bae632-9dfc-4529-9828-f51e09b95e58": {
+            "id": "42bae632-9dfc-4529-9828-f51e09b95e58",
+            "cell_type": "markdown",
+            "source": "Now, we can time the runtime of `mean_square_py` in milliseconds.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "0ece955e-38a4-4ad9-82ad-0491833a29dd": {
+            "id": "0ece955e-38a4-4ad9-82ad-0491833a29dd",
+            "cell_type": "code",
+            "source": "from time import time\n\nstart = time()\nanswer = mean_square_py(x_list)\nduration = (time() - start) * 1000\n\nprint(\"answer={:.4f}, done using list in {:.2f} ms\".format(answer, duration))",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "answer=0.3333, done using list in 68.55 ms\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 12
+        },
+        "1e022661-f712-44ac-8789-ca5ce6df0e66": {
+            "id": "1e022661-f712-44ac-8789-ca5ce6df0e66",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "90b662da-23e4-402c-8fc0-733ccf299265",
+                        "5f2a0b6e-3984-44db-a899-c6cb0db3d2fe",
+                        "40cbe3ce-31d8-425d-8fbb-9431a4c45d95"
+                    ]
+                }
+            },
+            "source": "The NumPy method"
+        },
+        "90b662da-23e4-402c-8fc0-733ccf299265": {
+            "id": "90b662da-23e4-402c-8fc0-733ccf299265",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "29138a1e-2adc-4a53-a8d7-18338fb59f26",
+                        "71e6e804-c017-436e-9a86-672902faeda6"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "29138a1e-2adc-4a53-a8d7-18338fb59f26": {
+            "id": "29138a1e-2adc-4a53-a8d7-18338fb59f26",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "cd14d2a1-54c9-4957-be1c-b685a8342cb3"
+                    ]
+                }
+            }
+        },
+        "71e6e804-c017-436e-9a86-672902faeda6": {
+            "id": "71e6e804-c017-436e-9a86-672902faeda6",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "91ce3d41-eb26-4fcc-afa8-5ff7249c6a7e"
+                    ]
+                }
+            }
+        },
+        "cd14d2a1-54c9-4957-be1c-b685a8342cb3": {
+            "id": "cd14d2a1-54c9-4957-be1c-b685a8342cb3",
+            "cell_type": "markdown",
+            "source": "NumPy provides an alternative to Python list for multidimensional numerical arrays.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "91ce3d41-eb26-4fcc-afa8-5ff7249c6a7e": {
+            "id": "91ce3d41-eb26-4fcc-afa8-5ff7249c6a7e",
+            "cell_type": "code",
+            "source": "import numpy as np\n\ndef mean_square_np(x_array):\n    return np.mean(x_array ** 2)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 10
+        },
+        "5f2a0b6e-3984-44db-a899-c6cb0db3d2fe": {
+            "id": "5f2a0b6e-3984-44db-a899-c6cb0db3d2fe",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "dc9a2e6d-7d5e-48da-b68f-bf83225b8217",
+                        "a72c4c21-ab9f-4c5a-b7c7-b38a2196cf15"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "dc9a2e6d-7d5e-48da-b68f-bf83225b8217": {
+            "id": "dc9a2e6d-7d5e-48da-b68f-bf83225b8217",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "c6be8468-49ae-4560-b6d8-69d597d8acae"
+                    ]
+                }
+            }
+        },
+        "a72c4c21-ab9f-4c5a-b7c7-b38a2196cf15": {
+            "id": "a72c4c21-ab9f-4c5a-b7c7-b38a2196cf15",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6078b2b9-6e3e-4518-b441-d62d7ac102be"
+                    ]
+                }
+            }
+        },
+        "c6be8468-49ae-4560-b6d8-69d597d8acae": {
+            "id": "c6be8468-49ae-4560-b6d8-69d597d8acae",
+            "cell_type": "markdown",
+            "source": "Constructing large random vectors is easy.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "6078b2b9-6e3e-4518-b441-d62d7ac102be": {
+            "id": "6078b2b9-6e3e-4518-b441-d62d7ac102be",
+            "cell_type": "code",
+            "source": "x_np = np.random.random(1_000_000)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 11
+        },
+        "40cbe3ce-31d8-425d-8fbb-9431a4c45d95": {
+            "id": "40cbe3ce-31d8-425d-8fbb-9431a4c45d95",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "2890dff6-a605-4865-a9d8-e07172c8e2da",
+                        "d3889921-b450-4fc9-a2f7-bfa3ef3e9d0e"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "2890dff6-a605-4865-a9d8-e07172c8e2da": {
+            "id": "2890dff6-a605-4865-a9d8-e07172c8e2da",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "06c62d2c-dd40-4e45-9f48-256007413b76"
+                    ]
+                }
+            }
+        },
+        "d3889921-b450-4fc9-a2f7-bfa3ef3e9d0e": {
+            "id": "d3889921-b450-4fc9-a2f7-bfa3ef3e9d0e",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "48e8a5b2-dc68-493d-8032-e4164466f37d"
+                    ]
+                }
+            }
+        },
+        "06c62d2c-dd40-4e45-9f48-256007413b76": {
+            "id": "06c62d2c-dd40-4e45-9f48-256007413b76",
+            "cell_type": "markdown",
+            "source": "Let's time the performance.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "48e8a5b2-dc68-493d-8032-e4164466f37d": {
+            "id": "48e8a5b2-dc68-493d-8032-e4164466f37d",
+            "cell_type": "code",
+            "source": "start = time()\nanswer = mean_square_np(x_np)\nduration = (time() - start) * 1000\nprint(\"answer={:.4f}, done using numpy in {:.2f} ms\".format(answer, duration))",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "answer=0.3326, done using numpy in 1.67 ms\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 16
+        },
+        "e2f9d5f7-19a9-4b02-b3c9-2312a255ecc0": {
+            "id": "e2f9d5f7-19a9-4b02-b3c9-2312a255ecc0",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "4fc66ebd-e56f-4cfa-95c6-f35dcd3f1080"
+                    ]
+                }
+            },
+            "source": "NumPy is efficient"
+        },
+        "4fc66ebd-e56f-4cfa-95c6-f35dcd3f1080": {
+            "id": "4fc66ebd-e56f-4cfa-95c6-f35dcd3f1080",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "4e19c91d-0528-4f17-9eb5-0ad064541bac"
+                    ],
+                    "layout": "single"
+                }
+            },
+            "source": "This is a row"
+        },
+        "4e19c91d-0528-4f17-9eb5-0ad064541bac": {
+            "id": "4e19c91d-0528-4f17-9eb5-0ad064541bac",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "0db1293c-7e85-4f65-9866-ab5897f63099"
+                    ]
+                }
+            }
+        },
+        "0db1293c-7e85-4f65-9866-ab5897f63099": {
+            "id": "0db1293c-7e85-4f65-9866-ab5897f63099",
+            "cell_type": "markdown",
+            "source": "NumPy is\n\n1. Really fast.\n\n  > It's implemented in C, so it offers near native efficiency when computing using NumPy multidimensional arrays.\n\n2. Really succinct.\n\n  > NumPy functions are amazingly compact.  They also make use of the full Python syntactic constructs to express array computations efficiently.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1327 @@
+{
+    "metadata": {
+        "journal": {
+            "type": "journal",
+            "children": [
+                "9f70037d-5063-4197-b309-09b9a1502012",
+                "5e325bc6-2f5f-4a4c-8d65-f374ddf9ea66",
+                "adc8b46c-b97d-4d0b-b72c-888eff3a6984",
+                "967857a4-b74c-4b33-b96c-52e168ec9958",
+                "33c21a71-7ea9-4867-a537-87d23e478eb3",
+                "63bd93b6-3933-40f4-862d-a0bb1c9c4e3a"
+            ],
+            "author": "Ken Pu, 2022"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "9f70037d-5063-4197-b309-09b9a1502012": {
+            "id": "9f70037d-5063-4197-b309-09b9a1502012",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "7183e0f4-aa01-4748-9773-6ef9c2950f51"
+                    ]
+                }
+            },
+            "source": "Introduction"
+        },
+        "7183e0f4-aa01-4748-9773-6ef9c2950f51": {
+            "id": "7183e0f4-aa01-4748-9773-6ef9c2950f51",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "ab221383-a299-4619-ba05-fde19a59c8e4"
+                    ],
+                    "layout": "single"
+                }
+            },
+            "source": "This is a row"
+        },
+        "ab221383-a299-4619-ba05-fde19a59c8e4": {
+            "id": "ab221383-a299-4619-ba05-fde19a59c8e4",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "55a95380-0704-43e1-a72e-54316a8637f3"
+                    ]
+                }
+            }
+        },
+        "55a95380-0704-43e1-a72e-54316a8637f3": {
+            "id": "55a95380-0704-43e1-a72e-54316a8637f3",
+            "cell_type": "markdown",
+            "source": "Functions are the building blocks of software of any scale.\n\nPython functions have several interesting aspects worth examining.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "5e325bc6-2f5f-4a4c-8d65-f374ddf9ea66": {
+            "id": "5e325bc6-2f5f-4a4c-8d65-f374ddf9ea66",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "c8b9f484-6a57-4901-bde4-fa8dd4396a5b"
+                    ]
+                }
+            },
+            "source": "Basic function"
+        },
+        "c8b9f484-6a57-4901-bde4-fa8dd4396a5b": {
+            "id": "c8b9f484-6a57-4901-bde4-fa8dd4396a5b",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "3904045c-972e-4bcd-a320-d3bf4ef8c295",
+                        "1150e5df-782f-4dd4-b143-55936d493a40",
+                        "1d1b1ab8-a560-4b4c-9430-3adbbddb17f7",
+                        "0c299228-d399-417e-b2d1-c1b6c9109c1c"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "3904045c-972e-4bcd-a320-d3bf4ef8c295": {
+            "id": "3904045c-972e-4bcd-a320-d3bf4ef8c295",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "5a26a50e-82ac-4d4b-be8e-774a9c6e42c7"
+                    ]
+                }
+            }
+        },
+        "1150e5df-782f-4dd4-b143-55936d493a40": {
+            "id": "1150e5df-782f-4dd4-b143-55936d493a40",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6e8b660e-7ee1-4577-950a-94460d1a6359"
+                    ]
+                }
+            }
+        },
+        "5a26a50e-82ac-4d4b-be8e-774a9c6e42c7": {
+            "id": "5a26a50e-82ac-4d4b-be8e-774a9c6e42c7",
+            "cell_type": "markdown",
+            "source": "We should be fairly familiar with function declaration in Python.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "6e8b660e-7ee1-4577-950a-94460d1a6359": {
+            "id": "6e8b660e-7ee1-4577-950a-94460d1a6359",
+            "cell_type": "code",
+            "source": "def isprime(n):\n    for m in range(2, n):\n        if n % m == 0:\n            return False\n    return True",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 5
+        },
+        "1d1b1ab8-a560-4b4c-9430-3adbbddb17f7": {
+            "id": "1d1b1ab8-a560-4b4c-9430-3adbbddb17f7",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "fd87eb7e-51aa-4b27-9552-f0209f10dc22"
+                    ]
+                }
+            }
+        },
+        "0c299228-d399-417e-b2d1-c1b6c9109c1c": {
+            "id": "0c299228-d399-417e-b2d1-c1b6c9109c1c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "c46e719c-aac1-4117-9d06-829e7e3f7301"
+                    ]
+                }
+            }
+        },
+        "c46e719c-aac1-4117-9d06-829e7e3f7301": {
+            "id": "c46e719c-aac1-4117-9d06-829e7e3f7301",
+            "cell_type": "code",
+            "source": "isprime(2), isprime(3), isprime(4), isprime(5), isprime(6)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 6,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "(True, True, False, True, False)"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 6
+        },
+        "fd87eb7e-51aa-4b27-9552-f0209f10dc22": {
+            "id": "fd87eb7e-51aa-4b27-9552-f0209f10dc22",
+            "cell_type": "markdown",
+            "source": "Checking primality of 2, 3, 4, 5, 6",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "adc8b46c-b97d-4d0b-b72c-888eff3a6984": {
+            "id": "adc8b46c-b97d-4d0b-b72c-888eff3a6984",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "f7cc554e-8679-4dea-aa29-c7626ec47e02"
+                    ]
+                }
+            },
+            "source": "Type hints"
+        },
+        "f7cc554e-8679-4dea-aa29-c7626ec47e02": {
+            "id": "f7cc554e-8679-4dea-aa29-c7626ec47e02",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "a56c6b10-7144-40c3-b7b9-90b5163ab43c",
+                        "6cfe39d3-c62f-4120-a988-e30790ffeda3"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "a56c6b10-7144-40c3-b7b9-90b5163ab43c": {
+            "id": "a56c6b10-7144-40c3-b7b9-90b5163ab43c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "49069e0b-a85e-43ff-a6d6-8c220f786012"
+                    ]
+                }
+            }
+        },
+        "6cfe39d3-c62f-4120-a988-e30790ffeda3": {
+            "id": "6cfe39d3-c62f-4120-a988-e30790ffeda3",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "ba2f9a68-57d0-4643-a947-6173e5760bf3"
+                    ]
+                }
+            }
+        },
+        "49069e0b-a85e-43ff-a6d6-8c220f786012": {
+            "id": "49069e0b-a85e-43ff-a6d6-8c220f786012",
+            "cell_type": "markdown",
+            "source": "Since Python 3.5, Python supports type hints for **documentation** purposes.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "ba2f9a68-57d0-4643-a947-6173e5760bf3": {
+            "id": "ba2f9a68-57d0-4643-a947-6173e5760bf3",
+            "cell_type": "code",
+            "source": "def isprime(n: int) -> bool:\n    for m in range(2, n):\n        if n % m == 0:\n            return False\n    return True\n\nisprime(13)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 7,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "True"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 7
+        },
+        "967857a4-b74c-4b33-b96c-52e168ec9958": {
+            "id": "967857a4-b74c-4b33-b96c-52e168ec9958",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "c4601431-9a40-423a-be81-8a173b64ecd0",
+                        "ed538323-9401-4d45-b4a6-4ad3a8e42d2e",
+                        "53c3005f-8d20-44ca-b17b-3388d854437e",
+                        "4739234b-5a1f-4158-a13e-6ea4528d6256",
+                        "30ce5343-4a2e-4384-bdf6-3ce6a6b5b50d"
+                    ]
+                }
+            },
+            "source": "Keyword arguments"
+        },
+        "c4601431-9a40-423a-be81-8a173b64ecd0": {
+            "id": "c4601431-9a40-423a-be81-8a173b64ecd0",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "5ae04d64-58ec-4509-8724-56bf05f831c6",
+                        "568a62b6-be96-4521-80d8-1aa69285e87c"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "5ae04d64-58ec-4509-8724-56bf05f831c6": {
+            "id": "5ae04d64-58ec-4509-8724-56bf05f831c6",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "b1ceb4bb-be18-4eae-90af-b6682109ef05"
+                    ]
+                }
+            }
+        },
+        "568a62b6-be96-4521-80d8-1aa69285e87c": {
+            "id": "568a62b6-be96-4521-80d8-1aa69285e87c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "7cb86de7-2156-4349-9ef3-476b783556e9"
+                    ]
+                }
+            }
+        },
+        "b1ceb4bb-be18-4eae-90af-b6682109ef05": {
+            "id": "b1ceb4bb-be18-4eae-90af-b6682109ef05",
+            "cell_type": "markdown",
+            "source": "Here is a function that counts the number of occurrences.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "7cb86de7-2156-4349-9ef3-476b783556e9": {
+            "id": "7cb86de7-2156-4349-9ef3-476b783556e9",
+            "cell_type": "code",
+            "source": "def count(element, collection):\n    n = 0\n    for x in collection:\n        if x == element:\n            n += 1\n    return n",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 8
+        },
+        "ed538323-9401-4d45-b4a6-4ad3a8e42d2e": {
+            "id": "ed538323-9401-4d45-b4a6-4ad3a8e42d2e",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "931979ad-dcec-4133-a15b-1aa41f497a0f",
+                        "eef16cdd-2c19-4f66-a2c3-969db74168be"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "931979ad-dcec-4133-a15b-1aa41f497a0f": {
+            "id": "931979ad-dcec-4133-a15b-1aa41f497a0f",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "66ccb06a-7092-47e9-bc40-b4c3070aa224"
+                    ]
+                }
+            }
+        },
+        "eef16cdd-2c19-4f66-a2c3-969db74168be": {
+            "id": "eef16cdd-2c19-4f66-a2c3-969db74168be",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "edf3d64d-75f0-4361-a2de-1615da0e2438"
+                    ]
+                }
+            }
+        },
+        "66ccb06a-7092-47e9-bc40-b4c3070aa224": {
+            "id": "66ccb06a-7092-47e9-bc40-b4c3070aa224",
+            "cell_type": "markdown",
+            "source": "What's the output of this expression?",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "edf3d64d-75f0-4361-a2de-1615da0e2438": {
+            "id": "edf3d64d-75f0-4361-a2de-1615da0e2438",
+            "cell_type": "code",
+            "source": "count([\"a\", \"b\", \"a\"], \"a\")",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 9,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "0"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 9
+        },
+        "53c3005f-8d20-44ca-b17b-3388d854437e": {
+            "id": "53c3005f-8d20-44ca-b17b-3388d854437e",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "5a482135-a3d4-4410-a589-cae0fc35ec37",
+                        "f17c176b-ff77-4ae4-9684-cb87d9445ef3"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "5a482135-a3d4-4410-a589-cae0fc35ec37": {
+            "id": "5a482135-a3d4-4410-a589-cae0fc35ec37",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "0d483734-b6f4-4e5f-a50d-37cd9a4c2778"
+                    ]
+                }
+            }
+        },
+        "f17c176b-ff77-4ae4-9684-cb87d9445ef3": {
+            "id": "f17c176b-ff77-4ae4-9684-cb87d9445ef3",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "97d9b36e-a08a-45fe-be42-b5b26460b762"
+                    ]
+                }
+            }
+        },
+        "0d483734-b6f4-4e5f-a50d-37cd9a4c2778": {
+            "id": "0d483734-b6f4-4e5f-a50d-37cd9a4c2778",
+            "cell_type": "markdown",
+            "source": "What about this?",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "97d9b36e-a08a-45fe-be42-b5b26460b762": {
+            "id": "97d9b36e-a08a-45fe-be42-b5b26460b762",
+            "cell_type": "code",
+            "source": "count(\"a\", [\"a\", \"b\", \"a\"])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 10,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "2"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 10
+        },
+        "4739234b-5a1f-4158-a13e-6ea4528d6256": {
+            "id": "4739234b-5a1f-4158-a13e-6ea4528d6256",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "7a3a6069-bccf-4082-90cd-f166f3d9ed7d"
+                    ],
+                    "layout": "single"
+                }
+            },
+            "source": "This is a row"
+        },
+        "7a3a6069-bccf-4082-90cd-f166f3d9ed7d": {
+            "id": "7a3a6069-bccf-4082-90cd-f166f3d9ed7d",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6b256b2e-73e2-41ce-b311-624272ee108b"
+                    ]
+                }
+            }
+        },
+        "6b256b2e-73e2-41ce-b311-624272ee108b": {
+            "id": "6b256b2e-73e2-41ce-b311-624272ee108b",
+            "cell_type": "markdown",
+            "source": "Python supports keyword arguments.\n\n> - It makes the semantics clear, thus greatly reducing programming errors.\n> - It allows different ordering of parameter passing.\n> - It supports _default_ values for optional arguments.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "30ce5343-4a2e-4384-bdf6-3ce6a6b5b50d": {
+            "id": "30ce5343-4a2e-4384-bdf6-3ce6a6b5b50d",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "f13b12ed-9c77-4915-b689-eb04121094ee",
+                        "a91459c3-a9d8-4285-856b-802e67a806f1"
+                    ],
+                    "layout": "columns"
+                }
+            },
+            "source": "This is a row"
+        },
+        "f13b12ed-9c77-4915-b689-eb04121094ee": {
+            "id": "f13b12ed-9c77-4915-b689-eb04121094ee",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "878370d5-2ba1-457f-af1f-bf6ae6df72f8"
+                    ]
+                }
+            }
+        },
+        "a91459c3-a9d8-4285-856b-802e67a806f1": {
+            "id": "a91459c3-a9d8-4285-856b-802e67a806f1",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "d384aaf9-7a38-459a-b6c9-4a2f83e28fbd"
+                    ]
+                }
+            }
+        },
+        "878370d5-2ba1-457f-af1f-bf6ae6df72f8": {
+            "id": "878370d5-2ba1-457f-af1f-bf6ae6df72f8",
+            "cell_type": "code",
+            "source": "count(collection=[\"a\", \"b\", \"a\"],\n      element=\"a\")",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 11,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "2"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 11
+        },
+        "d384aaf9-7a38-459a-b6c9-4a2f83e28fbd": {
+            "id": "d384aaf9-7a38-459a-b6c9-4a2f83e28fbd",
+            "cell_type": "code",
+            "source": "count(element=\"a\", \n      collection=[\"a\", \"b\", \"a\"])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 12,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "2"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 12
+        },
+        "33c21a71-7ea9-4867-a537-87d23e478eb3": {
+            "id": "33c21a71-7ea9-4867-a537-87d23e478eb3",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "6e3ce364-7e51-4ab3-af1a-ec988fcbbe9d",
+                        "687902f1-5aac-476b-8490-2f7acd954ced"
+                    ]
+                }
+            },
+            "source": "Default arguments"
+        },
+        "6e3ce364-7e51-4ab3-af1a-ec988fcbbe9d": {
+            "id": "6e3ce364-7e51-4ab3-af1a-ec988fcbbe9d",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "b48f3143-da91-4a0f-bad4-0d2232ee2aac",
+                        "005839c7-c9eb-46cd-843a-2575bef6622c",
+                        "51ab6224-0465-45e1-9075-86e0f3df8dcd",
+                        "48196caa-64f0-4a4a-9ee3-d682c233699a"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "b48f3143-da91-4a0f-bad4-0d2232ee2aac": {
+            "id": "b48f3143-da91-4a0f-bad4-0d2232ee2aac",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "9ea69008-ff15-4f8a-8b41-2be76ed1efd1"
+                    ]
+                }
+            }
+        },
+        "005839c7-c9eb-46cd-843a-2575bef6622c": {
+            "id": "005839c7-c9eb-46cd-843a-2575bef6622c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "0c56e4f6-9039-488e-82b4-a6b1344356b1"
+                    ]
+                }
+            }
+        },
+        "9ea69008-ff15-4f8a-8b41-2be76ed1efd1": {
+            "id": "9ea69008-ff15-4f8a-8b41-2be76ed1efd1",
+            "cell_type": "markdown",
+            "source": "Consider a function that draws a box\naround a given text.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "0c56e4f6-9039-488e-82b4-a6b1344356b1": {
+            "id": "0c56e4f6-9039-488e-82b4-a6b1344356b1",
+            "cell_type": "code",
+            "source": "def boxit(text, margin):\n    n = len(text)\n    w = n + 2*margin\n    line0 = '+' + ('-' * w) + '+'\n    marg_str = \" \" * margin\n    line1 = '|' + marg_str + text + marg_str + '|'\n    print(\"\\n\".join([\n        line0,\n        line1,\n        line0\n    ]))",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 13
+        },
+        "51ab6224-0465-45e1-9075-86e0f3df8dcd": {
+            "id": "51ab6224-0465-45e1-9075-86e0f3df8dcd",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "39c119e5-47d4-47ab-a1d3-23f269260fea"
+                    ]
+                }
+            }
+        },
+        "48196caa-64f0-4a4a-9ee3-d682c233699a": {
+            "id": "48196caa-64f0-4a4a-9ee3-d682c233699a",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "2d73893a-a140-4d9f-adb8-31814ff4096f"
+                    ]
+                }
+            }
+        },
+        "39c119e5-47d4-47ab-a1d3-23f269260fea": {
+            "id": "39c119e5-47d4-47ab-a1d3-23f269260fea",
+            "cell_type": "markdown",
+            "source": "We need to specify the text and the margin.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "2d73893a-a140-4d9f-adb8-31814ff4096f": {
+            "id": "2d73893a-a140-4d9f-adb8-31814ff4096f",
+            "cell_type": "code",
+            "source": "boxit(\"Hello\", 2)\nboxit(\"Hello\", 5)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "+---------+\n|  Hello  |\n+---------+\n+---------------+\n|     Hello     |\n+---------------+\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 14
+        },
+        "687902f1-5aac-476b-8490-2f7acd954ced": {
+            "id": "687902f1-5aac-476b-8490-2f7acd954ced",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "d20567cd-279c-4bc0-9c54-3af83427f798",
+                        "1e057b19-18bf-46f1-a726-a84df6c77000",
+                        "34f61a4c-ccf6-41e3-9ff3-efb2d13696a7",
+                        "8d0f458d-cb33-42b0-b3ff-2322041b080d"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "d20567cd-279c-4bc0-9c54-3af83427f798": {
+            "id": "d20567cd-279c-4bc0-9c54-3af83427f798",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "22db771b-e887-46e7-b6d6-795fa97d1647"
+                    ]
+                }
+            }
+        },
+        "1e057b19-18bf-46f1-a726-a84df6c77000": {
+            "id": "1e057b19-18bf-46f1-a726-a84df6c77000",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "eeb0d28c-92e6-4db5-8157-26bbc9072745"
+                    ]
+                }
+            }
+        },
+        "22db771b-e887-46e7-b6d6-795fa97d1647": {
+            "id": "22db771b-e887-46e7-b6d6-795fa97d1647",
+            "cell_type": "markdown",
+            "source": "We can use make the `margin` argument optional by assigning it a default value.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "eeb0d28c-92e6-4db5-8157-26bbc9072745": {
+            "id": "eeb0d28c-92e6-4db5-8157-26bbc9072745",
+            "cell_type": "code",
+            "source": "def boxit(text, margin=2):\n    n = len(text)\n    w = n + 2*margin\n    line0 = '+' + ('-' * w) + '+'\n    marg_str = \" \" * margin\n    line1 = '|' + marg_str + text + marg_str + '|'\n    print(\"\\n\".join([\n        line0,\n        line1,\n        line0\n    ]))",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 15
+        },
+        "34f61a4c-ccf6-41e3-9ff3-efb2d13696a7": {
+            "id": "34f61a4c-ccf6-41e3-9ff3-efb2d13696a7",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "90628e1a-3c95-4fec-8df1-0bc3086afa66"
+                    ]
+                }
+            }
+        },
+        "8d0f458d-cb33-42b0-b3ff-2322041b080d": {
+            "id": "8d0f458d-cb33-42b0-b3ff-2322041b080d",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "87c792cf-6a3b-4bb7-a1a3-32b2ee037aa3"
+                    ]
+                }
+            }
+        },
+        "90628e1a-3c95-4fec-8df1-0bc3086afa66": {
+            "id": "90628e1a-3c95-4fec-8df1-0bc3086afa66",
+            "cell_type": "markdown",
+            "source": "Now, we can call `boxit` with and without the `margin` argument.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "87c792cf-6a3b-4bb7-a1a3-32b2ee037aa3": {
+            "id": "87c792cf-6a3b-4bb7-a1a3-32b2ee037aa3",
+            "cell_type": "code",
+            "source": "boxit(\"Hello\")\nboxit(\"Hello\", 4)\nboxit(\"Hello\", margin=8)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "+---------+\n|  Hello  |\n+---------+\n+-------------+\n|    Hello    |\n+-------------+\n+---------------------+\n|        Hello        |\n+---------------------+\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 16
+        },
+        "63bd93b6-3933-40f4-862d-a0bb1c9c4e3a": {
+            "id": "63bd93b6-3933-40f4-862d-a0bb1c9c4e3a",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "54e2d6dd-be2e-4de8-a121-8e5de531b0b3",
+                        "a37714d8-475c-4acc-a0eb-c437d15bb1a7",
+                        "ed5cd1b7-22ec-4615-9795-cb45af5864a8",
+                        "e4a12a93-11fd-48ed-877d-21a9e2eff0ec",
+                        "30ca06d9-63c1-4b5b-a235-eb1212a1f424"
+                    ]
+                }
+            },
+            "source": "Variadic functions"
+        },
+        "54e2d6dd-be2e-4de8-a121-8e5de531b0b3": {
+            "id": "54e2d6dd-be2e-4de8-a121-8e5de531b0b3",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "1a468ac3-30ab-40fc-abbf-83fc55923382",
+                        "703a3ba9-da27-4086-813c-07c853ba9053"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "1a468ac3-30ab-40fc-abbf-83fc55923382": {
+            "id": "1a468ac3-30ab-40fc-abbf-83fc55923382",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "07e52aa6-3523-4167-be9b-126eb74b725c"
+                    ]
+                }
+            }
+        },
+        "703a3ba9-da27-4086-813c-07c853ba9053": {
+            "id": "703a3ba9-da27-4086-813c-07c853ba9053",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "16db3204-c496-4637-88ac-3388ffe8b647"
+                    ]
+                }
+            }
+        },
+        "07e52aa6-3523-4167-be9b-126eb74b725c": {
+            "id": "07e52aa6-3523-4167-be9b-126eb74b725c",
+            "cell_type": "markdown",
+            "source": "What's a _variadic function_?",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "16db3204-c496-4637-88ac-3388ffe8b647": {
+            "id": "16db3204-c496-4637-88ac-3388ffe8b647",
+            "cell_type": "markdown",
+            "source": "> In mathematics and in computer programming, a variadic function is a function of indefinite arity, i.e., one which accepts a variable number of arguments.\n>\n>`https://en.wikipedia.org/wiki/Variadic_function`",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "a37714d8-475c-4acc-a0eb-c437d15bb1a7": {
+            "id": "a37714d8-475c-4acc-a0eb-c437d15bb1a7",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "e9672d98-83a7-4f41-b908-2173913f33ee",
+                        "62309d30-f437-4876-bab4-d78839312226"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "e9672d98-83a7-4f41-b908-2173913f33ee": {
+            "id": "e9672d98-83a7-4f41-b908-2173913f33ee",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "053a84a5-f562-4e5e-81b3-e44c392af61d"
+                    ]
+                }
+            }
+        },
+        "62309d30-f437-4876-bab4-d78839312226": {
+            "id": "62309d30-f437-4876-bab4-d78839312226",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "5912e543-e02a-4d97-a8f9-ef0310b5c445"
+                    ]
+                }
+            }
+        },
+        "053a84a5-f562-4e5e-81b3-e44c392af61d": {
+            "id": "053a84a5-f562-4e5e-81b3-e44c392af61d",
+            "cell_type": "markdown",
+            "source": "Python distinguishes:\n\n1. Position parameters\n2. Keyword parameters",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "5912e543-e02a-4d97-a8f9-ef0310b5c445": {
+            "id": "5912e543-e02a-4d97-a8f9-ef0310b5c445",
+            "cell_type": "code",
+            "source": "count(\"hello\", collection=[1,2,\"hello\", \"world\"])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 17,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "1"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 17
+        },
+        "e4a12a93-11fd-48ed-877d-21a9e2eff0ec": {
+            "id": "e4a12a93-11fd-48ed-877d-21a9e2eff0ec",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "bf2156d8-f6ef-4c2d-850a-b9b7f32c5c1a",
+                        "5c8dff4a-9dc3-4c8a-b74a-c36e7d03cced"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "bf2156d8-f6ef-4c2d-850a-b9b7f32c5c1a": {
+            "id": "bf2156d8-f6ef-4c2d-850a-b9b7f32c5c1a",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6d44d906-733d-4493-be71-a7e0290402e6"
+                    ]
+                }
+            }
+        },
+        "5c8dff4a-9dc3-4c8a-b74a-c36e7d03cced": {
+            "id": "5c8dff4a-9dc3-4c8a-b74a-c36e7d03cced",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "bfc4aedf-c8a2-4958-9d0c-7fecf8d5e9c2"
+                    ]
+                }
+            }
+        },
+        "6d44d906-733d-4493-be71-a7e0290402e6": {
+            "id": "6d44d906-733d-4493-be71-a7e0290402e6",
+            "cell_type": "markdown",
+            "source": "Variadic function can accept arbitrarily many position parameters and keyword parameters.\n\n- Position parameters are stored in `*args` as a list\n- Keyword parameters are stored as `**kwargs` as a dictionary.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "bfc4aedf-c8a2-4958-9d0c-7fecf8d5e9c2": {
+            "id": "bfc4aedf-c8a2-4958-9d0c-7fecf8d5e9c2",
+            "cell_type": "code",
+            "source": "#\n# applies one more more statistics functions to the numbers\n# given position arguments.\n#\ndef statistics(*numbers, **stat_funcs):\n    for name, fn in stat_funcs.items():\n        print(f\"{name} = {fn(numbers)}\")",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 22
+        },
+        "30ca06d9-63c1-4b5b-a235-eb1212a1f424": {
+            "id": "30ca06d9-63c1-4b5b-a235-eb1212a1f424",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "0be9174a-7ae9-4490-909e-957af918abb4",
+                        "fef974cd-515c-4cba-9299-d54f0bb769be"
+                    ],
+                    "layout": "columns"
+                }
+            },
+            "source": "This is a row"
+        },
+        "0be9174a-7ae9-4490-909e-957af918abb4": {
+            "id": "0be9174a-7ae9-4490-909e-957af918abb4",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "46ac09f2-c4ec-4e78-9ffc-9db1667c2351"
+                    ]
+                }
+            }
+        },
+        "fef974cd-515c-4cba-9299-d54f0bb769be": {
+            "id": "fef974cd-515c-4cba-9299-d54f0bb769be",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "7fefbfae-74ba-414c-ad80-c108af24f056"
+                    ]
+                }
+            }
+        },
+        "46ac09f2-c4ec-4e78-9ffc-9db1667c2351": {
+            "id": "46ac09f2-c4ec-4e78-9ffc-9db1667c2351",
+            "cell_type": "code",
+            "source": "def average(numbers):\n    return sum(numbers)/len(numbers)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": 19
+        },
+        "7fefbfae-74ba-414c-ad80-c108af24f056": {
+            "id": "7fefbfae-74ba-414c-ad80-c108af24f056",
+            "cell_type": "code",
+            "source": "statistics(1, 2, 3, 4, 5,\n           max=max,\n           min=min,\n           mean=average)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "max = 5\nmin = 1\nmean = 3.0\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 24
+        },
+        "ed5cd1b7-22ec-4615-9795-cb45af5864a8": {
+            "id": "ed5cd1b7-22ec-4615-9795-cb45af5864a8",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "ebb76c82-33bf-43b4-b48f-e92897b1a0b9",
+                        "065dc85f-460a-49ce-97b7-a1dc6e033ea9"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "ebb76c82-33bf-43b4-b48f-e92897b1a0b9": {
+            "id": "ebb76c82-33bf-43b4-b48f-e92897b1a0b9",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "32a7e3fc-a218-42e9-b76c-1c8df8faab53"
+                    ]
+                }
+            }
+        },
+        "065dc85f-460a-49ce-97b7-a1dc6e033ea9": {
+            "id": "065dc85f-460a-49ce-97b7-a1dc6e033ea9",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1be6de5f-aa4c-4559-a703-403b174374ba"
+                    ]
+                }
+            }
+        },
+        "32a7e3fc-a218-42e9-b76c-1c8df8faab53": {
+            "id": "32a7e3fc-a218-42e9-b76c-1c8df8faab53",
+            "cell_type": "markdown",
+            "source": "Position parameters are defined by its position,\nwhile the keyword parameters are defined by its keyword.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "1be6de5f-aa4c-4559-a703-403b174374ba": {
+            "id": "1be6de5f-aa4c-4559-a703-403b174374ba",
+            "cell_type": "markdown",
+            "source": "`count(\"hello\", collection=[...])` has two parameters.\n\nIt has two arguments:\n\n```\ndef count(element, collection)\n```\n\n- `element` is given as a position parameter\n- `collection` is given as a keyword parameter",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        }
+    }
+}

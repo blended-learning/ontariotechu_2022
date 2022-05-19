@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "journal": {
+            "type": "journal",
+            "children": [
+                "8da2f9e1-2601-463e-b428-a01716747635"
+            ],
+            "author": "Ken Pu"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "8da2f9e1-2601-463e-b428-a01716747635": {
+            "id": "8da2f9e1-2601-463e-b428-a01716747635",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "dbbdbba8-cc0f-476a-9685-6133556d6a5a"
+                    ]
+                }
+            },
+            "source": "This is card"
+        },
+        "dbbdbba8-cc0f-476a-9685-6133556d6a5a": {
+            "id": "dbbdbba8-cc0f-476a-9685-6133556d6a5a",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "f22f56d8-d285-425a-97cf-bdcd706da944",
+                        "6fd6c6fd-8c23-41fe-801f-50ddd29e049c"
+                    ],
+                    "layout": "right"
+                }
+            },
+            "source": "This is a row"
+        },
+        "6fd6c6fd-8c23-41fe-801f-50ddd29e049c": {
+            "id": "6fd6c6fd-8c23-41fe-801f-50ddd29e049c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1d42200d-7ea0-4192-9e55-81def2bcdea3"
+                    ]
+                }
+            }
+        },
+        "f22f56d8-d285-425a-97cf-bdcd706da944": {
+            "id": "f22f56d8-d285-425a-97cf-bdcd706da944",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "96f0cf04-c8f7-4f9c-ac33-fabeb60d81d1"
+                    ]
+                }
+            }
+        },
+        "1d42200d-7ea0-4192-9e55-81def2bcdea3": {
+            "id": "1d42200d-7ea0-4192-9e55-81def2bcdea3",
+            "cell_type": "markdown",
+            "source": "_Markdown_ goes here.\n\n$$\nE=mc^2\n$$",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "96f0cf04-c8f7-4f9c-ac33-fabeb60d81d1": {
+            "id": "96f0cf04-c8f7-4f9c-ac33-fabeb60d81d1",
+            "cell_type": "code",
+            "source": "1 + 1 == 2",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [],
+            "execution_count": null
+        }
+    }
+}

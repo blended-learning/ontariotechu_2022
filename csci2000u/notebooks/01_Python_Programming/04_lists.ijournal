@@ -1,0 +1,1648 @@
+{
+    "metadata": {
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "journal": {
+            "type": "journal",
+            "children": [
+                "1a01d865-7696-432b-b031-b44a43863577",
+                "16e1335e-790d-4dc6-b9fd-f78941b8eb31",
+                "f8d631f2-9fca-41c7-84e5-e4dd98dd6810",
+                "f774be4a-c331-4992-9e4b-e273fa3cda40",
+                "5de4915a-ad37-47bf-994b-c693f00be6c9",
+                "46bf2a78-62b2-458c-a977-7039bebce696",
+                "1927b449-0168-4a43-9552-2a7a53dc1892",
+                "cb8b918a-16bf-4c11-b9ec-e6f44e054dc1",
+                "0791e42c-af34-4e90-8bf6-18c2302afba1",
+                "591e2095-adf1-4c80-8202-4d42c7ac07a6"
+            ],
+            "author": "01_Python_Programming/04_data_structures"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "1a01d865-7696-432b-b031-b44a43863577": {
+            "id": "1a01d865-7696-432b-b031-b44a43863577",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "3eb9ef53-2689-4e5e-b493-f9856ff55225"
+                    ]
+                }
+            },
+            "source": "Introduction"
+        },
+        "3eb9ef53-2689-4e5e-b493-f9856ff55225": {
+            "id": "3eb9ef53-2689-4e5e-b493-f9856ff55225",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "a5c86665-37dc-4b54-b2e5-7289e9b918f6"
+                    ],
+                    "layout": "columns"
+                }
+            },
+            "source": "This is a row"
+        },
+        "a5c86665-37dc-4b54-b2e5-7289e9b918f6": {
+            "id": "a5c86665-37dc-4b54-b2e5-7289e9b918f6",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "9cf30614-e8e7-4e81-bf16-fd85683b22bc"
+                    ]
+                }
+            }
+        },
+        "9cf30614-e8e7-4e81-bf16-fd85683b22bc": {
+            "id": "9cf30614-e8e7-4e81-bf16-fd85683b22bc",
+            "cell_type": "markdown",
+            "source": "We are going to cover the built-in Python data structures, and demonstrate how they can be used to perform data analysis.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "16e1335e-790d-4dc6-b9fd-f78941b8eb31": {
+            "id": "16e1335e-790d-4dc6-b9fd-f78941b8eb31",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "c6f91f4e-c8a7-4d7a-a546-474f7af46103",
+                        "3c5be1d8-93b6-4bb7-affa-e83e66095256",
+                        "e8e8f703-9416-4aba-874a-d5aa7ec89ac5"
+                    ]
+                }
+            },
+            "source": "Lists"
+        },
+        "c6f91f4e-c8a7-4d7a-a546-474f7af46103": {
+            "id": "c6f91f4e-c8a7-4d7a-a546-474f7af46103",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "ef65919f-8270-4b74-8bb6-15538177f1e6",
+                        "cd2bba80-da61-45ce-8a1f-94f5e2ffd3d1"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "ef65919f-8270-4b74-8bb6-15538177f1e6": {
+            "id": "ef65919f-8270-4b74-8bb6-15538177f1e6",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f72d2426-94dd-4c43-a893-6905ebc5eecf"
+                    ]
+                }
+            }
+        },
+        "cd2bba80-da61-45ce-8a1f-94f5e2ffd3d1": {
+            "id": "cd2bba80-da61-45ce-8a1f-94f5e2ffd3d1",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1331d13c-46e7-45a7-9231-29bfde71c526"
+                    ]
+                }
+            }
+        },
+        "f72d2426-94dd-4c43-a893-6905ebc5eecf": {
+            "id": "f72d2426-94dd-4c43-a893-6905ebc5eecf",
+            "cell_type": "markdown",
+            "source": "Lists is a workhorse in any Python program.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "1331d13c-46e7-45a7-9231-29bfde71c526": {
+            "id": "1331d13c-46e7-45a7-9231-29bfde71c526",
+            "cell_type": "code",
+            "source": "my_list = ['hello', 123, 3.1415]\n\nmy_list",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 1,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "['hello', 123, 3.1415]"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 1
+        },
+        "3c5be1d8-93b6-4bb7-affa-e83e66095256": {
+            "id": "3c5be1d8-93b6-4bb7-affa-e83e66095256",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "b7a75897-b662-4643-829b-254388d2a604",
+                        "8d660976-e518-4dfd-8849-4b8775f7c48d"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "b7a75897-b662-4643-829b-254388d2a604": {
+            "id": "b7a75897-b662-4643-829b-254388d2a604",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1da873a5-39ff-4180-be8f-b0e1bd18e19d"
+                    ]
+                }
+            }
+        },
+        "8d660976-e518-4dfd-8849-4b8775f7c48d": {
+            "id": "8d660976-e518-4dfd-8849-4b8775f7c48d",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "fd41db5a-70e9-4b34-a690-16bfc8855333"
+                    ]
+                }
+            }
+        },
+        "1da873a5-39ff-4180-be8f-b0e1bd18e19d": {
+            "id": "1da873a5-39ff-4180-be8f-b0e1bd18e19d",
+            "cell_type": "markdown",
+            "source": "- Lists are dynamic: they can be extended or shortened.\n",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "fd41db5a-70e9-4b34-a690-16bfc8855333": {
+            "id": "fd41db5a-70e9-4b34-a690-16bfc8855333",
+            "cell_type": "code",
+            "source": "my_list.append(\"One more element\")\nmy_list.extend([\"several\", \"more\", \"elements\"])\n\nmy_list",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 2,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "['hello', 123, 3.1415, 'One more element', 'several', 'more', 'elements']"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 2
+        },
+        "e8e8f703-9416-4aba-874a-d5aa7ec89ac5": {
+            "id": "e8e8f703-9416-4aba-874a-d5aa7ec89ac5",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "caa5b038-e81e-47ec-a465-fc5276867321",
+                        "280dfab9-36f4-4190-895c-1ae3f7441fa1"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "caa5b038-e81e-47ec-a465-fc5276867321": {
+            "id": "caa5b038-e81e-47ec-a465-fc5276867321",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "22b5e901-59ca-4681-9bee-20337152a412"
+                    ]
+                }
+            }
+        },
+        "280dfab9-36f4-4190-895c-1ae3f7441fa1": {
+            "id": "280dfab9-36f4-4190-895c-1ae3f7441fa1",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "2e262cc3-284c-479b-9a26-fece76dba7d7"
+                    ]
+                }
+            }
+        },
+        "22b5e901-59ca-4681-9bee-20337152a412": {
+            "id": "22b5e901-59ca-4681-9bee-20337152a412",
+            "cell_type": "markdown",
+            "source": "- Lists are heterogeneous: any data can be stored as an element in a list.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "2e262cc3-284c-479b-9a26-fece76dba7d7": {
+            "id": "2e262cc3-284c-479b-9a26-fece76dba7d7",
+            "cell_type": "code",
+            "source": "my_list.insert(3, [\"a\", \"sublist\"])\nmy_list",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 3,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "['hello',\n 123,\n 3.1415,\n ['a', 'sublist'],\n 'One more element',\n 'several',\n 'more',\n 'elements']"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 3
+        },
+        "f8d631f2-9fca-41c7-84e5-e4dd98dd6810": {
+            "id": "f8d631f2-9fca-41c7-84e5-e4dd98dd6810",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "64a6888b-00e8-40a2-8dae-233c13af62e1",
+                        "44c6f22c-17bd-449e-b580-aa09c4288cea",
+                        "1ac3fe82-18df-4faf-ae77-ffe16bbb845b"
+                    ]
+                }
+            },
+            "source": "List index"
+        },
+        "64a6888b-00e8-40a2-8dae-233c13af62e1": {
+            "id": "64a6888b-00e8-40a2-8dae-233c13af62e1",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "733a8dc4-51b1-4fdd-a815-3b19d069921f",
+                        "fd5068b6-4ef5-4d25-8679-19ab31a5eb10"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "733a8dc4-51b1-4fdd-a815-3b19d069921f": {
+            "id": "733a8dc4-51b1-4fdd-a815-3b19d069921f",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "3fce675c-3167-4d47-b8d1-f5c1a7115802"
+                    ]
+                }
+            }
+        },
+        "fd5068b6-4ef5-4d25-8679-19ab31a5eb10": {
+            "id": "fd5068b6-4ef5-4d25-8679-19ab31a5eb10",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "604d5fe8-8c1e-4c65-904c-590afd5ac6b3"
+                    ]
+                }
+            }
+        },
+        "3fce675c-3167-4d47-b8d1-f5c1a7115802": {
+            "id": "3fce675c-3167-4d47-b8d1-f5c1a7115802",
+            "cell_type": "markdown",
+            "source": "Indexing single element",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "604d5fe8-8c1e-4c65-904c-590afd5ac6b3": {
+            "id": "604d5fe8-8c1e-4c65-904c-590afd5ac6b3",
+            "cell_type": "code",
+            "source": "# first element\nprint(my_list[0])\n\n# last element\nprint(my_list[-1])\n\n# second last element\nprint(my_list[-2])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "hello\nelements\nmore\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 4
+        },
+        "44c6f22c-17bd-449e-b580-aa09c4288cea": {
+            "id": "44c6f22c-17bd-449e-b580-aa09c4288cea",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "2779ed71-1a51-4213-97ee-0a3e39c210f8",
+                        "1f73605b-cd67-4102-aec4-990e3012b879"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "2779ed71-1a51-4213-97ee-0a3e39c210f8": {
+            "id": "2779ed71-1a51-4213-97ee-0a3e39c210f8",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "16034917-ffb6-42dc-ae2d-a317ee854ea1"
+                    ]
+                }
+            }
+        },
+        "1f73605b-cd67-4102-aec4-990e3012b879": {
+            "id": "1f73605b-cd67-4102-aec4-990e3012b879",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "c561c5c5-d48c-4253-a039-a7871dfeb690"
+                    ]
+                }
+            }
+        },
+        "16034917-ffb6-42dc-ae2d-a317ee854ea1": {
+            "id": "16034917-ffb6-42dc-ae2d-a317ee854ea1",
+            "cell_type": "markdown",
+            "source": "We can also use indexing to specify sub-lists.\n\nThe syntax is:\n\n```\nlist_expression[start:end]\n```\n\nwhere\n- start is inclusive\n- end is exclusive",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "c561c5c5-d48c-4253-a039-a7871dfeb690": {
+            "id": "c561c5c5-d48c-4253-a039-a7871dfeb690",
+            "cell_type": "code",
+            "source": "print(my_list[0:3])\nprint(my_list[1:3])\nprint(my_list[2:3])\nprint(my_list[2:-1])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "['hello', 123, 3.1415]\n[123, 3.1415]\n[3.1415]\n[3.1415, ['a', 'sublist'], 'One more element', 'several', 'more']\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 5
+        },
+        "1ac3fe82-18df-4faf-ae77-ffe16bbb845b": {
+            "id": "1ac3fe82-18df-4faf-ae77-ffe16bbb845b",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "18f1a56d-e4f8-4fdc-b5c5-42018110c9f8",
+                        "23537194-28e3-428b-a03d-dc96ceabe533"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "18f1a56d-e4f8-4fdc-b5c5-42018110c9f8": {
+            "id": "18f1a56d-e4f8-4fdc-b5c5-42018110c9f8",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "11631458-e05b-4b48-b534-a1527251fc93"
+                    ]
+                }
+            }
+        },
+        "23537194-28e3-428b-a03d-dc96ceabe533": {
+            "id": "23537194-28e3-428b-a03d-dc96ceabe533",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6518ee88-7d93-463f-a701-41417f50e028"
+                    ]
+                }
+            }
+        },
+        "11631458-e05b-4b48-b534-a1527251fc93": {
+            "id": "11631458-e05b-4b48-b534-a1527251fc93",
+            "cell_type": "markdown",
+            "source": "- The start index can be omitted if it is `0`.\n- The end index can be omitted if it is the length of the list.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "6518ee88-7d93-463f-a701-41417f50e028": {
+            "id": "6518ee88-7d93-463f-a701-41417f50e028",
+            "cell_type": "code",
+            "source": "print(my_list[:3])\nprint(my_list[3:])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "['hello', 123, 3.1415]\n[['a', 'sublist'], 'One more element', 'several', 'more', 'elements']\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 6
+        },
+        "f774be4a-c331-4992-9e4b-e273fa3cda40": {
+            "id": "f774be4a-c331-4992-9e4b-e273fa3cda40",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "8bbccd43-f2d2-4929-ae3f-c130df81544d",
+                        "39bdf7c6-e1c5-4550-9f0a-6cfe5d5125e1"
+                    ]
+                }
+            },
+            "source": "More on indexing"
+        },
+        "8bbccd43-f2d2-4929-ae3f-c130df81544d": {
+            "id": "8bbccd43-f2d2-4929-ae3f-c130df81544d",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "71ff30a0-31f0-40bb-bdf2-18517a27a7a5",
+                        "0e5706ee-7877-4948-90b0-3f561d330fd2"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "71ff30a0-31f0-40bb-bdf2-18517a27a7a5": {
+            "id": "71ff30a0-31f0-40bb-bdf2-18517a27a7a5",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "d3654027-31e5-4864-adc1-b709df26bb34"
+                    ]
+                }
+            }
+        },
+        "0e5706ee-7877-4948-90b0-3f561d330fd2": {
+            "id": "0e5706ee-7877-4948-90b0-3f561d330fd2",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "fd36e82c-be61-43aa-a891-a4dfd993ab8c"
+                    ]
+                }
+            }
+        },
+        "d3654027-31e5-4864-adc1-b709df26bb34": {
+            "id": "d3654027-31e5-4864-adc1-b709df26bb34",
+            "cell_type": "markdown",
+            "source": "We can specify a step value in the index:\n\n```\nlist[start:end:step]\n```",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "fd36e82c-be61-43aa-a891-a4dfd993ab8c": {
+            "id": "fd36e82c-be61-43aa-a891-a4dfd993ab8c",
+            "cell_type": "code",
+            "source": "numbers = [\"one\", \"two\", \"three\", \"four\", \"five\"]\n\nprint(numbers[0:5:2])\nprint(numbers[5:0:-1])\nprint(numbers[::-1])",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "['one', 'three', 'five']\n['five', 'four', 'three', 'two']\n['five', 'four', 'three', 'two', 'one']\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 7
+        },
+        "39bdf7c6-e1c5-4550-9f0a-6cfe5d5125e1": {
+            "id": "39bdf7c6-e1c5-4550-9f0a-6cfe5d5125e1",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "e921bcd4-5aff-40b9-b0bd-8742bf3c6b24",
+                        "093a3e6c-9227-40d7-96d3-78f97a778925",
+                        "4d9c2a1e-7171-4d02-b616-046f45bae8a1",
+                        "5181299a-859f-4885-9283-617252c6ce54",
+                        "7299abb1-2b6b-4813-925a-322a704dfaec",
+                        "a329d74c-fc12-4317-9671-4b5c7aa03b3f"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "e921bcd4-5aff-40b9-b0bd-8742bf3c6b24": {
+            "id": "e921bcd4-5aff-40b9-b0bd-8742bf3c6b24",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "8e8f6e8a-fde9-45a7-a46c-a04a10b31dd9"
+                    ]
+                }
+            }
+        },
+        "093a3e6c-9227-40d7-96d3-78f97a778925": {
+            "id": "093a3e6c-9227-40d7-96d3-78f97a778925",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f86c8c05-9630-409d-a0d3-9e6446a18aa3"
+                    ]
+                }
+            }
+        },
+        "8e8f6e8a-fde9-45a7-a46c-a04a10b31dd9": {
+            "id": "8e8f6e8a-fde9-45a7-a46c-a04a10b31dd9",
+            "cell_type": "markdown",
+            "source": "Lists are mutable.  This means that we use sublist as a lvalue in a Python assignment statement.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "f86c8c05-9630-409d-a0d3-9e6446a18aa3": {
+            "id": "f86c8c05-9630-409d-a0d3-9e6446a18aa3",
+            "cell_type": "code",
+            "source": "numbers = [1,2,3,4,5,6,7,8,9,10]\nnumbers",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 8,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 8
+        },
+        "4d9c2a1e-7171-4d02-b616-046f45bae8a1": {
+            "id": "4d9c2a1e-7171-4d02-b616-046f45bae8a1",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "c81a2064-3b72-4cb7-9bc5-a0a9f542ba5e"
+                    ]
+                }
+            }
+        },
+        "c81a2064-3b72-4cb7-9bc5-a0a9f542ba5e": {
+            "id": "c81a2064-3b72-4cb7-9bc5-a0a9f542ba5e",
+            "cell_type": "markdown",
+            "source": "- Reverse the first three element",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "5181299a-859f-4885-9283-617252c6ce54": {
+            "id": "5181299a-859f-4885-9283-617252c6ce54",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "4aeeeb8b-f59a-45dd-9adc-a58a426bdc5e"
+                    ]
+                }
+            }
+        },
+        "4aeeeb8b-f59a-45dd-9adc-a58a426bdc5e": {
+            "id": "4aeeeb8b-f59a-45dd-9adc-a58a426bdc5e",
+            "cell_type": "code",
+            "source": "numbers[:3] = reversed(numbers[:3])\nnumbers",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 9,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "[3, 2, 1, 4, 5, 6, 7, 8, 9, 10]"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 9
+        },
+        "7299abb1-2b6b-4813-925a-322a704dfaec": {
+            "id": "7299abb1-2b6b-4813-925a-322a704dfaec",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f5197d54-e83d-404a-b7df-d172b2d5a671"
+                    ]
+                }
+            }
+        },
+        "a329d74c-fc12-4317-9671-4b5c7aa03b3f": {
+            "id": "a329d74c-fc12-4317-9671-4b5c7aa03b3f",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "06938b42-394c-4b7b-a126-8f02f44c8918"
+                    ]
+                }
+            }
+        },
+        "f5197d54-e83d-404a-b7df-d172b2d5a671": {
+            "id": "f5197d54-e83d-404a-b7df-d172b2d5a671",
+            "cell_type": "markdown",
+            "source": "- Replace the last two elements by a long list of letters",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "06938b42-394c-4b7b-a126-8f02f44c8918": {
+            "id": "06938b42-394c-4b7b-a126-8f02f44c8918",
+            "cell_type": "code",
+            "source": "numbers[-2:] = \"hello\"\nnumbers",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 10,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "[3, 2, 1, 4, 5, 6, 7, 8, 'h', 'e', 'l', 'l', 'o']"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 10
+        },
+        "5de4915a-ad37-47bf-994b-c693f00be6c9": {
+            "id": "5de4915a-ad37-47bf-994b-c693f00be6c9",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "1f88e623-5e5c-46be-9102-a8daeea54d3e"
+                    ]
+                }
+            },
+            "source": "Functional transformations"
+        },
+        "1f88e623-5e5c-46be-9102-a8daeea54d3e": {
+            "id": "1f88e623-5e5c-46be-9102-a8daeea54d3e",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "963b782f-8ba7-4640-ab6b-6ffcf029a2fd",
+                        "bf68c8d7-51cd-4de9-b37a-2e9ec88fbc36"
+                    ],
+                    "layout": "columns"
+                }
+            },
+            "source": "This is a row"
+        },
+        "963b782f-8ba7-4640-ab6b-6ffcf029a2fd": {
+            "id": "963b782f-8ba7-4640-ab6b-6ffcf029a2fd",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "301e2094-0e60-4959-adaf-8ac76bb0e615"
+                    ]
+                }
+            }
+        },
+        "bf68c8d7-51cd-4de9-b37a-2e9ec88fbc36": {
+            "id": "bf68c8d7-51cd-4de9-b37a-2e9ec88fbc36",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "89e5b22f-d992-470c-80c1-c3c72d2847f1"
+                    ]
+                }
+            }
+        },
+        "301e2094-0e60-4959-adaf-8ac76bb0e615": {
+            "id": "301e2094-0e60-4959-adaf-8ac76bb0e615",
+            "cell_type": "markdown",
+            "source": "**Definition**\n\n> Functional programming is when programs _never_ modifies any data structure.  Instead, it focuses on the construction of __new__ data structures.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "89e5b22f-d992-470c-80c1-c3c72d2847f1": {
+            "id": "89e5b22f-d992-470c-80c1-c3c72d2847f1",
+            "cell_type": "markdown",
+            "source": "Some functional constructs for lists:\n\n1. Concatenation\n2. Out-of-place sorting\n3. Out-of-place reversal\n4. Zip\n5. Enumeration",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "46bf2a78-62b2-458c-a977-7039bebce696": {
+            "id": "46bf2a78-62b2-458c-a977-7039bebce696",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "c086f893-df3f-44f9-8d61-1f0fd11f45d6"
+                    ]
+                }
+            },
+            "source": "Concatenation"
+        },
+        "c086f893-df3f-44f9-8d61-1f0fd11f45d6": {
+            "id": "c086f893-df3f-44f9-8d61-1f0fd11f45d6",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "afa96c0c-7fc6-4a00-8814-2331d75af332",
+                        "51e71c1f-6f12-458e-8db0-857d491120c3",
+                        "399d48af-1f23-46b7-a96c-6094bbc6a799",
+                        "70d1dae0-19e6-4f24-9022-8563a5e46355"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "afa96c0c-7fc6-4a00-8814-2331d75af332": {
+            "id": "afa96c0c-7fc6-4a00-8814-2331d75af332",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "5304142c-c05d-46a1-b688-9880d6f1cb50"
+                    ]
+                }
+            }
+        },
+        "51e71c1f-6f12-458e-8db0-857d491120c3": {
+            "id": "51e71c1f-6f12-458e-8db0-857d491120c3",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "3d770264-6f79-407a-b312-8a8422f4d2bd"
+                    ]
+                }
+            }
+        },
+        "5304142c-c05d-46a1-b688-9880d6f1cb50": {
+            "id": "5304142c-c05d-46a1-b688-9880d6f1cb50",
+            "cell_type": "markdown",
+            "source": "We can merge two lists into a single list.\n\nConcatenation is functional, which means that it constructs a **new** list.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "3d770264-6f79-407a-b312-8a8422f4d2bd": {
+            "id": "3d770264-6f79-407a-b312-8a8422f4d2bd",
+            "cell_type": "code",
+            "source": "a = [1,2,3]\nb = ['a', 'b', 'c']\n\nc = a + b\nc",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 11,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "[1, 2, 3, 'a', 'b', 'c']"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 11
+        },
+        "399d48af-1f23-46b7-a96c-6094bbc6a799": {
+            "id": "399d48af-1f23-46b7-a96c-6094bbc6a799",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "22265dc3-6e71-4fcd-82c3-8e0004eb8676"
+                    ]
+                }
+            }
+        },
+        "70d1dae0-19e6-4f24-9022-8563a5e46355": {
+            "id": "70d1dae0-19e6-4f24-9022-8563a5e46355",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "69c1eb38-fee0-44d0-baee-3440f36202d0"
+                    ]
+                }
+            }
+        },
+        "22265dc3-6e71-4fcd-82c3-8e0004eb8676": {
+            "id": "22265dc3-6e71-4fcd-82c3-8e0004eb8676",
+            "cell_type": "markdown",
+            "source": "The two lists `a` and `b` are unmodified.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "69c1eb38-fee0-44d0-baee-3440f36202d0": {
+            "id": "69c1eb38-fee0-44d0-baee-3440f36202d0",
+            "cell_type": "code",
+            "source": "a, b",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 12,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "([1, 2, 3], ['a', 'b', 'c'])"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 12
+        },
+        "1927b449-0168-4a43-9552-2a7a53dc1892": {
+            "id": "1927b449-0168-4a43-9552-2a7a53dc1892",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "4d6f3817-ef80-4c08-88fc-7a7323e8b4e1",
+                        "614490dc-2d2c-4400-9a9b-ebcf009cadba"
+                    ]
+                }
+            },
+            "source": "Out-of-place sorting"
+        },
+        "4d6f3817-ef80-4c08-88fc-7a7323e8b4e1": {
+            "id": "4d6f3817-ef80-4c08-88fc-7a7323e8b4e1",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "ea691d9b-e127-47ab-b951-1a75585bcf44",
+                        "942610bf-8770-4de8-8117-6f44fe6e9ab7"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "ea691d9b-e127-47ab-b951-1a75585bcf44": {
+            "id": "ea691d9b-e127-47ab-b951-1a75585bcf44",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "a7656fa2-cf9c-40c6-b6a9-ab3e0e94613f"
+                    ]
+                }
+            }
+        },
+        "942610bf-8770-4de8-8117-6f44fe6e9ab7": {
+            "id": "942610bf-8770-4de8-8117-6f44fe6e9ab7",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "dce8f882-7236-47c2-88d2-c689f7f76b0d"
+                    ]
+                }
+            }
+        },
+        "a7656fa2-cf9c-40c6-b6a9-ab3e0e94613f": {
+            "id": "a7656fa2-cf9c-40c6-b6a9-ab3e0e94613f",
+            "cell_type": "markdown",
+            "source": "__Definition:__\n\n> - In-place sorting is a sorting operation that modifies the list without making a copy.\n>\n> - Out-of-place sorting is an operation that creates a sorted copy of the input list, while leaving the input list unmodified.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "dce8f882-7236-47c2-88d2-c689f7f76b0d": {
+            "id": "dce8f882-7236-47c2-88d2-c689f7f76b0d",
+            "cell_type": "code",
+            "source": "a = [3, 4, 2, 3, 0]\nb = [3, 4, 2, 3, 0]\n\na.sort()\nc = sorted(b)\n\nprint(\"a =\", a)\nprint(\"b =\", b)\nprint(\"c =\", c)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "a = [0, 2, 3, 3, 4]\nb = [3, 4, 2, 3, 0]\nc = [0, 2, 3, 3, 4]\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 13
+        },
+        "614490dc-2d2c-4400-9a9b-ebcf009cadba": {
+            "id": "614490dc-2d2c-4400-9a9b-ebcf009cadba",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [],
+                    "layout": "columns"
+                }
+            },
+            "source": "This is a row"
+        },
+        "cb8b918a-16bf-4c11-b9ec-e6f44e054dc1": {
+            "id": "cb8b918a-16bf-4c11-b9ec-e6f44e054dc1",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "f1f10472-43f3-4cb3-8525-48b071822345"
+                    ]
+                }
+            },
+            "source": "Reversing a list"
+        },
+        "f1f10472-43f3-4cb3-8525-48b071822345": {
+            "id": "f1f10472-43f3-4cb3-8525-48b071822345",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "43c74607-468f-418c-9ca9-b98882451923",
+                        "2bd1ae70-ab69-4f7b-a1d6-e54f181e3b76",
+                        "324f5f67-93bf-407a-becf-85e78ecf4470",
+                        "77ad6a69-e348-4331-a4b9-aa5a63fe60e4"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "43c74607-468f-418c-9ca9-b98882451923": {
+            "id": "43c74607-468f-418c-9ca9-b98882451923",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f8447adc-defa-49fa-8f84-9b2f864321bc"
+                    ]
+                }
+            }
+        },
+        "2bd1ae70-ab69-4f7b-a1d6-e54f181e3b76": {
+            "id": "2bd1ae70-ab69-4f7b-a1d6-e54f181e3b76",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "2d07ba5d-c299-43a1-8b70-f6db8188b541"
+                    ]
+                }
+            }
+        },
+        "f8447adc-defa-49fa-8f84-9b2f864321bc": {
+            "id": "f8447adc-defa-49fa-8f84-9b2f864321bc",
+            "cell_type": "markdown",
+            "source": "The `reversed(...)` function returns an iterable object which iterates over the input list in reverse order.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "2d07ba5d-c299-43a1-8b70-f6db8188b541": {
+            "id": "2d07ba5d-c299-43a1-8b70-f6db8188b541",
+            "cell_type": "code",
+            "source": "a = ['a', 'b', 'c']\nb = list(reversed(a))\n\nprint(a)\nprint(b)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "['a', 'b', 'c']\n['c', 'b', 'a']\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 14
+        },
+        "324f5f67-93bf-407a-becf-85e78ecf4470": {
+            "id": "324f5f67-93bf-407a-becf-85e78ecf4470",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "b90a2d43-75bd-4b6b-a31f-33a258183df1"
+                    ]
+                }
+            }
+        },
+        "77ad6a69-e348-4331-a4b9-aa5a63fe60e4": {
+            "id": "77ad6a69-e348-4331-a4b9-aa5a63fe60e4",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "6c785a77-9a0b-4e3f-8b3a-9bd6e81da4e7"
+                    ]
+                }
+            }
+        },
+        "b90a2d43-75bd-4b6b-a31f-33a258183df1": {
+            "id": "b90a2d43-75bd-4b6b-a31f-33a258183df1",
+            "cell_type": "markdown",
+            "source": "In contrast, the `...reverse()` method changes the list in-place.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "6c785a77-9a0b-4e3f-8b3a-9bd6e81da4e7": {
+            "id": "6c785a77-9a0b-4e3f-8b3a-9bd6e81da4e7",
+            "cell_type": "code",
+            "source": "a = ['a', 'b', 'c']\na.reverse()\nprint(a)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "['c', 'b', 'a']\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 15
+        },
+        "591e2095-adf1-4c80-8202-4d42c7ac07a6": {
+            "id": "591e2095-adf1-4c80-8202-4d42c7ac07a6",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "38c8d322-a67d-43db-8be7-04ab82eb91c3"
+                    ]
+                }
+            },
+            "source": "Enumerating a list"
+        },
+        "0791e42c-af34-4e90-8bf6-18c2302afba1": {
+            "id": "0791e42c-af34-4e90-8bf6-18c2302afba1",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "a0380959-11ec-485a-9f0a-100e6fd7db54"
+                    ]
+                }
+            },
+            "source": "Zip two (or more) lists"
+        },
+        "a0380959-11ec-485a-9f0a-100e6fd7db54": {
+            "id": "a0380959-11ec-485a-9f0a-100e6fd7db54",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "94a5cf77-b866-4d73-bfa1-b1a66007c116",
+                        "60260d8d-f703-4265-a302-613b1dea90df"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "94a5cf77-b866-4d73-bfa1-b1a66007c116": {
+            "id": "94a5cf77-b866-4d73-bfa1-b1a66007c116",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "14c541f3-305d-4714-a984-6df2aa7ee076"
+                    ]
+                }
+            }
+        },
+        "60260d8d-f703-4265-a302-613b1dea90df": {
+            "id": "60260d8d-f703-4265-a302-613b1dea90df",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "7aeb8781-64da-4968-a2ee-8187255d07ba"
+                    ]
+                }
+            }
+        },
+        "14c541f3-305d-4714-a984-6df2aa7ee076": {
+            "id": "14c541f3-305d-4714-a984-6df2aa7ee076",
+            "cell_type": "markdown",
+            "source": "Suppose we have two lists, and we want to match the elements into pairs.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "7aeb8781-64da-4968-a2ee-8187255d07ba": {
+            "id": "7aeb8781-64da-4968-a2ee-8187255d07ba",
+            "cell_type": "code",
+            "source": "first_names = ['Jack', 'Albert', 'Richard']\nlast_names = ['Bauer', 'Einstein', 'Feynman']\n\nfull_names = list(zip(first_names, last_names))\nfull_names",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 16,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "[('Jack', 'Bauer'), ('Albert', 'Einstein'), ('Richard', 'Feynman')]"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 16
+        },
+        "38c8d322-a67d-43db-8be7-04ab82eb91c3": {
+            "id": "38c8d322-a67d-43db-8be7-04ab82eb91c3",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "3c5ae453-1176-456d-9451-1d00019cf27f",
+                        "0963d1a1-5179-4651-bfbd-297adb6ec4fc",
+                        "de5a4b1e-1ced-4eb0-9882-e4a6c80c4e0c",
+                        "03296952-5465-45bc-9a0d-c18500fdb751",
+                        "732fef19-4e03-4ee1-a89c-b17aadf5884c",
+                        "8f0a7fe9-af68-4281-a15a-504022a8620c"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "3c5ae453-1176-456d-9451-1d00019cf27f": {
+            "id": "3c5ae453-1176-456d-9451-1d00019cf27f",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "88bd5857-926d-4ebf-b9c8-2369db1b2877"
+                    ]
+                }
+            }
+        },
+        "0963d1a1-5179-4651-bfbd-297adb6ec4fc": {
+            "id": "0963d1a1-5179-4651-bfbd-297adb6ec4fc",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "96e7b1f5-b1a9-4c41-bcb3-1bc249e5bc8b"
+                    ]
+                }
+            }
+        },
+        "88bd5857-926d-4ebf-b9c8-2369db1b2877": {
+            "id": "88bd5857-926d-4ebf-b9c8-2369db1b2877",
+            "cell_type": "markdown",
+            "source": "It's common to `zip` a list with integers so we label the elements of a list with its position in that list.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "96e7b1f5-b1a9-4c41-bcb3-1bc249e5bc8b": {
+            "id": "96e7b1f5-b1a9-4c41-bcb3-1bc249e5bc8b",
+            "cell_type": "code",
+            "source": "cities = ['Toronto', 'Montreal', 'London']\n\nfor (i,name) in zip(range(3), cities):\n    print(i, name)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "0 Toronto\n1 Montreal\n2 London\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 17
+        },
+        "de5a4b1e-1ced-4eb0-9882-e4a6c80c4e0c": {
+            "id": "de5a4b1e-1ced-4eb0-9882-e4a6c80c4e0c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "e53ca2f7-54a6-4f29-8df0-c6d5689f4d5b"
+                    ]
+                }
+            }
+        },
+        "03296952-5465-45bc-9a0d-c18500fdb751": {
+            "id": "03296952-5465-45bc-9a0d-c18500fdb751",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f25ac82c-0132-4b0b-b36d-689de59d05b1"
+                    ]
+                }
+            }
+        },
+        "e53ca2f7-54a6-4f29-8df0-c6d5689f4d5b": {
+            "id": "e53ca2f7-54a6-4f29-8df0-c6d5689f4d5b",
+            "cell_type": "markdown",
+            "source": "Python has a more convenient way:\n\n```python\nzip(range(len(mylist)), mylist)\n```\n\nis equivalent to\n\n```python\nenumerate(mylist)\n```",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "f25ac82c-0132-4b0b-b36d-689de59d05b1": {
+            "id": "f25ac82c-0132-4b0b-b36d-689de59d05b1",
+            "cell_type": "code",
+            "source": "for (i, name) in enumerate(cities):\n    print(i, name)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "0 Toronto\n1 Montreal\n2 London\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 18
+        },
+        "732fef19-4e03-4ee1-a89c-b17aadf5884c": {
+            "id": "732fef19-4e03-4ee1-a89c-b17aadf5884c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "bff9bb3c-665a-41c2-8459-39ed8bb2392e"
+                    ]
+                }
+            }
+        },
+        "8f0a7fe9-af68-4281-a15a-504022a8620c": {
+            "id": "8f0a7fe9-af68-4281-a15a-504022a8620c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "a8307168-2472-409d-9e09-569dbd8cb0f1"
+                    ]
+                }
+            }
+        },
+        "bff9bb3c-665a-41c2-8459-39ed8bb2392e": {
+            "id": "bff9bb3c-665a-41c2-8459-39ed8bb2392e",
+            "cell_type": "markdown",
+            "source": "In fact, `enumerate` gives a bit more: the starting index doesn't have to be zero.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "a8307168-2472-409d-9e09-569dbd8cb0f1": {
+            "id": "a8307168-2472-409d-9e09-569dbd8cb0f1",
+            "cell_type": "code",
+            "source": "for (i, name) in enumerate(cities, start=100):\n    print(i, name)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "100 Toronto\n101 Montreal\n102 London\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 19
+        }
+    }
+}

@@ -1,0 +1,451 @@
+{
+    "metadata": {
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "journal": {
+            "type": "journal",
+            "children": [
+                "9c046ede-eba4-4781-a8ae-d794716cca89",
+                "25e67267-6b2f-4ae7-98ff-5bcdecfb6af0",
+                "fa5bd432-f789-4602-a455-336c1b94c595"
+            ],
+            "author": "topic_01 Python Programming/02_custom_libraries"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "9c046ede-eba4-4781-a8ae-d794716cca89": {
+            "id": "9c046ede-eba4-4781-a8ae-d794716cca89",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "355c4714-44dc-47b1-921b-333c17734737"
+                    ]
+                }
+            },
+            "source": "Custom Package"
+        },
+        "355c4714-44dc-47b1-921b-333c17734737": {
+            "id": "355c4714-44dc-47b1-921b-333c17734737",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "a31d4e6d-e19f-47dc-9e9c-2f6c9e12f127",
+                        "c3f0c2b8-8fee-4843-8c6d-43af246acd66"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "a31d4e6d-e19f-47dc-9e9c-2f6c9e12f127": {
+            "id": "a31d4e6d-e19f-47dc-9e9c-2f6c9e12f127",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "b20bac38-a676-499d-829c-ea681b27f02f"
+                    ]
+                }
+            }
+        },
+        "c3f0c2b8-8fee-4843-8c6d-43af246acd66": {
+            "id": "c3f0c2b8-8fee-4843-8c6d-43af246acd66",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "ce346ef2-e298-46a9-b911-2887e3fa2aae"
+                    ]
+                }
+            }
+        },
+        "b20bac38-a676-499d-829c-ea681b27f02f": {
+            "id": "b20bac38-a676-499d-829c-ea681b27f02f",
+            "cell_type": "markdown",
+            "source": "- A package is a directory of python files.\n\n- A module is a python file that defines variables and functions.\n\nHere is a package `mypackage` containing a module `mypackage.mymodule`",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "ce346ef2-e298-46a9-b911-2887e3fa2aae": {
+            "id": "ce346ef2-e298-46a9-b911-2887e3fa2aae",
+            "cell_type": "code",
+            "source": "! tree mypackage",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "\u001b[01;34mmypackage\u001b[00m\n├── mymodule.py\n└── \u001b[01;34m__pycache__\u001b[00m\n    └── mymodule.cpython-39.pyc\n\n1 directory, 2 files\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 31
+        },
+        "25e67267-6b2f-4ae7-98ff-5bcdecfb6af0": {
+            "id": "25e67267-6b2f-4ae7-98ff-5bcdecfb6af0",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "9831c1db-9732-4a3a-9025-92629c42c088"
+                    ]
+                }
+            },
+            "source": "Custom module"
+        },
+        "9831c1db-9732-4a3a-9025-92629c42c088": {
+            "id": "9831c1db-9732-4a3a-9025-92629c42c088",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "251ef0e7-1b5a-4da1-ac4c-38b26e3af435",
+                        "e6a3b560-846e-4926-b637-43e64519a983"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "251ef0e7-1b5a-4da1-ac4c-38b26e3af435": {
+            "id": "251ef0e7-1b5a-4da1-ac4c-38b26e3af435",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "59c722db-dc25-48f2-ad7a-a28833736a3d"
+                    ]
+                }
+            }
+        },
+        "e6a3b560-846e-4926-b637-43e64519a983": {
+            "id": "e6a3b560-846e-4926-b637-43e64519a983",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "2d87168a-276b-4905-b0cd-5b0449494758"
+                    ]
+                }
+            }
+        },
+        "59c722db-dc25-48f2-ad7a-a28833736a3d": {
+            "id": "59c722db-dc25-48f2-ad7a-a28833736a3d",
+            "cell_type": "markdown",
+            "source": "Here, we have a module that defines:\n\n1. Variables\n2. Functi",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "2d87168a-276b-4905-b0cd-5b0449494758": {
+            "id": "2d87168a-276b-4905-b0cd-5b0449494758",
+            "cell_type": "code",
+            "source": "! cat mypackage/mymodule.py",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "course_name = 'Scientific Data Analysis'\ncourse_code = 'CSCI 2020U'\n\ndef greeting(name):\n    print(f\"Hello, {name}.\")\n\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 26
+        },
+        "fa5bd432-f789-4602-a455-336c1b94c595": {
+            "id": "fa5bd432-f789-4602-a455-336c1b94c595",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "3e5e0bb1-d99b-49a5-a3bf-5767d5e45d12",
+                        "83ce3691-4ca9-4ab9-957e-de3d2f50b471",
+                        "274dd5b9-a27f-4608-98e9-6972b4132de6"
+                    ]
+                }
+            },
+            "source": "Using custom modules"
+        },
+        "3e5e0bb1-d99b-49a5-a3bf-5767d5e45d12": {
+            "id": "3e5e0bb1-d99b-49a5-a3bf-5767d5e45d12",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "e136a177-ddd6-4ca0-8d5c-36e24ab074d7",
+                        "8552e3e5-9e10-465e-9396-9f7f6e45d8f3"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "e136a177-ddd6-4ca0-8d5c-36e24ab074d7": {
+            "id": "e136a177-ddd6-4ca0-8d5c-36e24ab074d7",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "d736ae40-83a8-4b64-aa65-366c2f7992ac"
+                    ]
+                }
+            }
+        },
+        "8552e3e5-9e10-465e-9396-9f7f6e45d8f3": {
+            "id": "8552e3e5-9e10-465e-9396-9f7f6e45d8f3",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "8d01128b-7f79-49a8-ab3d-d21897aadcf9"
+                    ]
+                }
+            }
+        },
+        "83ce3691-4ca9-4ab9-957e-de3d2f50b471": {
+            "id": "83ce3691-4ca9-4ab9-957e-de3d2f50b471",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "8f5d4e64-f5a7-4c05-89db-b9d41e2b2f69",
+                        "8b8e5416-a3c1-4501-aec5-6514f55dba14"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "8f5d4e64-f5a7-4c05-89db-b9d41e2b2f69": {
+            "id": "8f5d4e64-f5a7-4c05-89db-b9d41e2b2f69",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "313f1471-7ee8-47b9-b78c-da67f3736d2d"
+                    ]
+                }
+            }
+        },
+        "8b8e5416-a3c1-4501-aec5-6514f55dba14": {
+            "id": "8b8e5416-a3c1-4501-aec5-6514f55dba14",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "c3414e3f-69cb-4039-8a5b-1e49174f52a9"
+                    ]
+                }
+            }
+        },
+        "d736ae40-83a8-4b64-aa65-366c2f7992ac": {
+            "id": "d736ae40-83a8-4b64-aa65-366c2f7992ac",
+            "cell_type": "markdown",
+            "source": "We can import it and refer to the defined variables and functions by their __fully qualified names__.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "8d01128b-7f79-49a8-ab3d-d21897aadcf9": {
+            "id": "8d01128b-7f79-49a8-ab3d-d21897aadcf9",
+            "cell_type": "code",
+            "source": "import mypackage.mymodule\n\nmypackage.mymodule.course_name",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 32,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "'Scientific Data Analysis'"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 32
+        },
+        "313f1471-7ee8-47b9-b78c-da67f3736d2d": {
+            "id": "313f1471-7ee8-47b9-b78c-da67f3736d2d",
+            "cell_type": "markdown",
+            "source": "To avoid a long qualified names, we can assign an alias to the module.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "c3414e3f-69cb-4039-8a5b-1e49174f52a9": {
+            "id": "c3414e3f-69cb-4039-8a5b-1e49174f52a9",
+            "cell_type": "code",
+            "source": "import mypackage.mymodule as my\n\nmy.course_name",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 33,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "'Scientific Data Analysis'"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 33
+        },
+        "274dd5b9-a27f-4608-98e9-6972b4132de6": {
+            "id": "274dd5b9-a27f-4608-98e9-6972b4132de6",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "8037e672-bbac-4689-97e9-889807f2595c",
+                        "a981a5ee-fb5b-4d30-9104-ea57ad81f68f"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "8037e672-bbac-4689-97e9-889807f2595c": {
+            "id": "8037e672-bbac-4689-97e9-889807f2595c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "e9588922-6e50-4541-8681-06d5f76908a2"
+                    ]
+                }
+            }
+        },
+        "a981a5ee-fb5b-4d30-9104-ea57ad81f68f": {
+            "id": "a981a5ee-fb5b-4d30-9104-ea57ad81f68f",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "4564a54a-c3af-452f-8900-9a5f8baaf24d"
+                    ]
+                }
+            }
+        },
+        "e9588922-6e50-4541-8681-06d5f76908a2": {
+            "id": "e9588922-6e50-4541-8681-06d5f76908a2",
+            "cell_type": "markdown",
+            "source": "We can even import the variables and functions directly into the current __namespace__ so they can used without reference to any modules.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "4564a54a-c3af-452f-8900-9a5f8baaf24d": {
+            "id": "4564a54a-c3af-452f-8900-9a5f8baaf24d",
+            "cell_type": "code",
+            "source": "from mypackage.mymodule import course_name, greeting\n\ngreeting(course_name)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "Hello, Scientific Data Analysis.\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 34
+        }
+    }
+}

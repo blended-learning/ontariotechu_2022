@@ -1,0 +1,914 @@
+{
+    "metadata": {
+        "language_info": {
+            "name": "python",
+            "version": "3.9.5",
+            "mimetype": "text/x-python",
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "pygments_lexer": "ipython3",
+            "nbconvert_exporter": "python",
+            "file_extension": ".py"
+        },
+        "kernelspec": {
+            "display_name": "Python 3 (ipykernel)",
+            "name": "python3"
+        },
+        "journal": {
+            "type": "journal",
+            "children": [
+                "d240f043-b1c8-4553-b724-487f973a7c12",
+                "3892a703-90fd-472a-8147-df8736ea33ba",
+                "21b2df98-4256-45a5-9ae2-9f4e9281ea89",
+                "da7b566c-ed1c-49c1-ac61-34abcb9856db",
+                "bd847bea-6653-4325-a0c1-fd6b9f271668"
+            ],
+            "author": "Ken Pu"
+        }
+    },
+    "nbformat_minor": 4,
+    "nbformat": 4,
+    "cells": {
+        "d240f043-b1c8-4553-b724-487f973a7c12": {
+            "id": "d240f043-b1c8-4553-b724-487f973a7c12",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "d145c35a-81dc-4bd6-83a2-f50799689cb3"
+                    ]
+                }
+            },
+            "source": "About Dictionaries"
+        },
+        "d145c35a-81dc-4bd6-83a2-f50799689cb3": {
+            "id": "d145c35a-81dc-4bd6-83a2-f50799689cb3",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "86f5349e-1e16-46a1-bdc8-198759d3024a",
+                        "368920f7-d519-4f01-8e78-160a3511f232"
+                    ],
+                    "layout": "columns"
+                }
+            },
+            "source": "This is a row"
+        },
+        "86f5349e-1e16-46a1-bdc8-198759d3024a": {
+            "id": "86f5349e-1e16-46a1-bdc8-198759d3024a",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "fa43911a-6060-4b6c-b051-cbe3e1523c09"
+                    ]
+                }
+            }
+        },
+        "fa43911a-6060-4b6c-b051-cbe3e1523c09": {
+            "id": "fa43911a-6060-4b6c-b051-cbe3e1523c09",
+            "cell_type": "markdown",
+            "source": "Dictionary is a crucial data structure in Computer Science in general.  It has many names:\n\n- Lookup tables\n- Hash-map\n- Map\n",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "below"
+                }
+            },
+            "attachments": {}
+        },
+        "368920f7-d519-4f01-8e78-160a3511f232": {
+            "id": "368920f7-d519-4f01-8e78-160a3511f232",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "93384c8d-50fa-4c14-927f-b08d0a66bec3"
+                    ]
+                }
+            }
+        },
+        "93384c8d-50fa-4c14-927f-b08d0a66bec3": {
+            "id": "93384c8d-50fa-4c14-927f-b08d0a66bec3",
+            "cell_type": "markdown",
+            "source": "Python provides dictionary as a built-in data structure.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "below"
+                }
+            },
+            "attachments": {}
+        },
+        "3892a703-90fd-472a-8147-df8736ea33ba": {
+            "id": "3892a703-90fd-472a-8147-df8736ea33ba",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "2af4e0c3-59a7-4770-ba35-cf5b51623102"
+                    ]
+                }
+            },
+            "source": "Key/Value pairs"
+        },
+        "2af4e0c3-59a7-4770-ba35-cf5b51623102": {
+            "id": "2af4e0c3-59a7-4770-ba35-cf5b51623102",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "c8300414-2ac7-4305-b589-d6be4c77062b",
+                        "e63ef34f-cd6d-4c90-a8f5-a803a708597e"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "c8300414-2ac7-4305-b589-d6be4c77062b": {
+            "id": "c8300414-2ac7-4305-b589-d6be4c77062b",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "e5d46bd9-b976-4d3e-a745-ee44ce6eae1b"
+                    ]
+                }
+            }
+        },
+        "e63ef34f-cd6d-4c90-a8f5-a803a708597e": {
+            "id": "e63ef34f-cd6d-4c90-a8f5-a803a708597e",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "8ba2c698-f5e5-4ce4-889f-fb43a7d08826"
+                    ]
+                }
+            }
+        },
+        "e5d46bd9-b976-4d3e-a745-ee44ce6eae1b": {
+            "id": "e5d46bd9-b976-4d3e-a745-ee44ce6eae1b",
+            "cell_type": "markdown",
+            "source": "A dictionary is a collection of key-value pairs such that all the keys are distinct.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "8ba2c698-f5e5-4ce4-889f-fb43a7d08826": {
+            "id": "8ba2c698-f5e5-4ce4-889f-fb43a7d08826",
+            "cell_type": "code",
+            "source": "friends = {\n    \"Jack Bauer\": \"416-493-5200\",\n    \"Albert Einstein\": \"429-483-4950\",\n    \"Richard Feynman\": \"905-284-9068\",\n}\nfriends",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 11,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "{'Jack Bauer': '416-493-5200',\n 'Albert Einstein': '429-483-4950',\n 'Richard Feynman': '905-284-9068'}"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 11
+        },
+        "21b2df98-4256-45a5-9ae2-9f4e9281ea89": {
+            "id": "21b2df98-4256-45a5-9ae2-9f4e9281ea89",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "e626852b-41c9-4b67-b2a8-ae0298f91dc5",
+                        "af68675a-1713-4110-8b7b-c5c1c9249464",
+                        "dd616fa6-a1e6-4ce1-b971-a44743ac068c",
+                        "f1881588-f55d-4e5e-a5b1-7704feaea6c1"
+                    ]
+                }
+            },
+            "source": "Accessing value by key"
+        },
+        "e626852b-41c9-4b67-b2a8-ae0298f91dc5": {
+            "id": "e626852b-41c9-4b67-b2a8-ae0298f91dc5",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "08c7c0dd-432e-4b6e-a837-9a095cab704e",
+                        "75b4686d-355b-4a56-9768-cf31449e291c"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "08c7c0dd-432e-4b6e-a837-9a095cab704e": {
+            "id": "08c7c0dd-432e-4b6e-a837-9a095cab704e",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "2e8c74f3-5313-46c2-8874-7d9850c86dc3"
+                    ]
+                }
+            }
+        },
+        "75b4686d-355b-4a56-9768-cf31449e291c": {
+            "id": "75b4686d-355b-4a56-9768-cf31449e291c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "93f34dc8-cac4-45bd-b7fc-0763b8bfd8e2"
+                    ]
+                }
+            }
+        },
+        "2e8c74f3-5313-46c2-8874-7d9850c86dc3": {
+            "id": "2e8c74f3-5313-46c2-8874-7d9850c86dc3",
+            "cell_type": "markdown",
+            "source": "We can index a dictionary by a key.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "93f34dc8-cac4-45bd-b7fc-0763b8bfd8e2": {
+            "id": "93f34dc8-cac4-45bd-b7fc-0763b8bfd8e2",
+            "cell_type": "code",
+            "source": "friends['Richard Feynman']",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 12,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "'905-284-9068'"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 12
+        },
+        "af68675a-1713-4110-8b7b-c5c1c9249464": {
+            "id": "af68675a-1713-4110-8b7b-c5c1c9249464",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "03d48467-f81d-47ad-9c70-e087a4578574",
+                        "cf5519f5-cf50-4ab7-b84b-ca57a0aec63a"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "03d48467-f81d-47ad-9c70-e087a4578574": {
+            "id": "03d48467-f81d-47ad-9c70-e087a4578574",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "112e54dd-2716-4c12-aaf3-80a98a243db4"
+                    ]
+                }
+            }
+        },
+        "cf5519f5-cf50-4ab7-b84b-ca57a0aec63a": {
+            "id": "cf5519f5-cf50-4ab7-b84b-ca57a0aec63a",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f74ac079-506f-4599-9249-4321b830d2ad"
+                    ]
+                }
+            }
+        },
+        "112e54dd-2716-4c12-aaf3-80a98a243db4": {
+            "id": "112e54dd-2716-4c12-aaf3-80a98a243db4",
+            "cell_type": "markdown",
+            "source": "But be careful that the key exists in a dictionary.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "f74ac079-506f-4599-9249-4321b830d2ad": {
+            "id": "f74ac079-506f-4599-9249-4321b830d2ad",
+            "cell_type": "code",
+            "source": "friends['Michael Jackson']",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "traceback": [
+                        "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+                        "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+                        "Input \u001b[0;32mIn [13]\u001b[0m, in \u001b[0;36m<cell line: 1>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[43mfriends\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mMichael Jackson\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m]\u001b[49m\n",
+                        "\u001b[0;31mKeyError\u001b[0m: 'Michael Jackson'"
+                    ],
+                    "ename": "KeyError",
+                    "evalue": "'Michael Jackson'",
+                    "output_type": "error"
+                }
+            ],
+            "execution_count": 13
+        },
+        "dd616fa6-a1e6-4ce1-b971-a44743ac068c": {
+            "id": "dd616fa6-a1e6-4ce1-b971-a44743ac068c",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "8a9b5027-4bc4-48ed-b1d6-d3878c8616bc",
+                        "8db66263-7dde-4325-80ed-d31f8e9bd446"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "8a9b5027-4bc4-48ed-b1d6-d3878c8616bc": {
+            "id": "8a9b5027-4bc4-48ed-b1d6-d3878c8616bc",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "e888fbd1-30a6-4960-8a0d-14dc37c21030"
+                    ]
+                }
+            }
+        },
+        "8db66263-7dde-4325-80ed-d31f8e9bd446": {
+            "id": "8db66263-7dde-4325-80ed-d31f8e9bd446",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "62be8008-a1c8-4962-80de-0b618cf84e39"
+                    ]
+                }
+            }
+        },
+        "e888fbd1-30a6-4960-8a0d-14dc37c21030": {
+            "id": "e888fbd1-30a6-4960-8a0d-14dc37c21030",
+            "cell_type": "markdown",
+            "source": "We can check ahead of time if a key exists in the dictionary.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "62be8008-a1c8-4962-80de-0b618cf84e39": {
+            "id": "62be8008-a1c8-4962-80de-0b618cf84e39",
+            "cell_type": "code",
+            "source": "'Michael Jackson' in friends",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "execution_count": 14,
+                    "output_type": "execute_result",
+                    "data": {
+                        "text/plain": "False"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 14
+        },
+        "f1881588-f55d-4e5e-a5b1-7704feaea6c1": {
+            "id": "f1881588-f55d-4e5e-a5b1-7704feaea6c1",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "3d015842-4544-4d7b-a8ad-0ac37b87d4f3",
+                        "c09c1176-2abd-4a78-ac43-84c19657dd57"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "3d015842-4544-4d7b-a8ad-0ac37b87d4f3": {
+            "id": "3d015842-4544-4d7b-a8ad-0ac37b87d4f3",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "44486460-ef73-4efc-b3c8-2ca3fdb14a59"
+                    ]
+                }
+            }
+        },
+        "c09c1176-2abd-4a78-ac43-84c19657dd57": {
+            "id": "c09c1176-2abd-4a78-ac43-84c19657dd57",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "aa128cac-87e0-44b9-a2a1-09083f917b24"
+                    ]
+                }
+            }
+        },
+        "44486460-ef73-4efc-b3c8-2ca3fdb14a59": {
+            "id": "44486460-ef73-4efc-b3c8-2ca3fdb14a59",
+            "cell_type": "markdown",
+            "source": "Or, we can catch the runtime exception.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "aa128cac-87e0-44b9-a2a1-09083f917b24": {
+            "id": "aa128cac-87e0-44b9-a2a1-09083f917b24",
+            "cell_type": "code",
+            "source": "try:\n    print(f\"Calling {friends['Michael Jackson']}\")\nexcept KeyError as error:\n    print(\"Error:\", error)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "Error: 'Michael Jackson'\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 15
+        },
+        "da7b566c-ed1c-49c1-ac61-34abcb9856db": {
+            "id": "da7b566c-ed1c-49c1-ac61-34abcb9856db",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "4563fb62-107c-4367-9bf6-cc39f6b77315"
+                    ]
+                }
+            },
+            "source": "Save retrieval of value"
+        },
+        "4563fb62-107c-4367-9bf6-cc39f6b77315": {
+            "id": "4563fb62-107c-4367-9bf6-cc39f6b77315",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "742b2727-7711-4cfb-a954-af1b97f22a70",
+                        "42934cee-b84a-4dd2-83a6-1f09f95293be",
+                        "80a73171-6433-4ec0-9f97-9dc56b52edcc",
+                        "7570134e-199e-44de-aa56-a3615ac221d9"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "742b2727-7711-4cfb-a954-af1b97f22a70": {
+            "id": "742b2727-7711-4cfb-a954-af1b97f22a70",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "c80e7234-feb0-4a0e-a08f-b5ebbe11c99a"
+                    ]
+                }
+            }
+        },
+        "42934cee-b84a-4dd2-83a6-1f09f95293be": {
+            "id": "42934cee-b84a-4dd2-83a6-1f09f95293be",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "22fb5fc6-a787-4b74-94b3-6b15c28533fe"
+                    ]
+                }
+            }
+        },
+        "c80e7234-feb0-4a0e-a08f-b5ebbe11c99a": {
+            "id": "c80e7234-feb0-4a0e-a08f-b5ebbe11c99a",
+            "cell_type": "markdown",
+            "source": "The `.get` method is a safe way of retrieving the value of a key.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "7570134e-199e-44de-aa56-a3615ac221d9": {
+            "id": "7570134e-199e-44de-aa56-a3615ac221d9",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "419579b2-b336-4217-94ed-2d32d5107efc"
+                    ]
+                }
+            }
+        },
+        "22fb5fc6-a787-4b74-94b3-6b15c28533fe": {
+            "id": "22fb5fc6-a787-4b74-94b3-6b15c28533fe",
+            "cell_type": "code",
+            "source": "x = 'unknown'\nif 'Michael' in friends:\n    x = friends['Michael']\nprint(x)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "unknown\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 16
+        },
+        "419579b2-b336-4217-94ed-2d32d5107efc": {
+            "id": "419579b2-b336-4217-94ed-2d32d5107efc",
+            "cell_type": "code",
+            "source": "x = friends.get('Michael', 'unknown')\n\nprint(x)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "unknown\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 17
+        },
+        "80a73171-6433-4ec0-9f97-9dc56b52edcc": {
+            "id": "80a73171-6433-4ec0-9f97-9dc56b52edcc",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "e1e6f0c9-2507-4859-b9fa-f05d55eed82d"
+                    ]
+                }
+            }
+        },
+        "e1e6f0c9-2507-4859-b9fa-f05d55eed82d": {
+            "id": "e1e6f0c9-2507-4859-b9fa-f05d55eed82d",
+            "cell_type": "markdown",
+            "source": "It allows us to specify a default value as a second argument.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "bd847bea-6653-4325-a0c1-fd6b9f271668": {
+            "id": "bd847bea-6653-4325-a0c1-fd6b9f271668",
+            "cell_type": "markdown",
+            "metadata": {
+                "name": "",
+                "tags": [],
+                "journal": {
+                    "type": "card",
+                    "children": [
+                        "a575a67f-385d-4ccc-b345-2bbb23900975",
+                        "0ee465e5-1789-4f70-bd07-351a5f9eaa22",
+                        "6e8a8de8-bc89-4195-b526-7627bf0f65fe"
+                    ]
+                }
+            },
+            "source": "Iterating over dictionaries"
+        },
+        "a575a67f-385d-4ccc-b345-2bbb23900975": {
+            "id": "a575a67f-385d-4ccc-b345-2bbb23900975",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "92fd9ddf-844e-4841-bcdf-3012c261900a",
+                        "d27d3fe7-5c37-4a86-be58-6bcca6d84ced"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "92fd9ddf-844e-4841-bcdf-3012c261900a": {
+            "id": "92fd9ddf-844e-4841-bcdf-3012c261900a",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "bb7a8eff-8a91-4138-aa7f-fa470a8cd780"
+                    ]
+                }
+            }
+        },
+        "d27d3fe7-5c37-4a86-be58-6bcca6d84ced": {
+            "id": "d27d3fe7-5c37-4a86-be58-6bcca6d84ced",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "809abbef-8290-4f33-b090-ad696760019d"
+                    ]
+                }
+            }
+        },
+        "bb7a8eff-8a91-4138-aa7f-fa470a8cd780": {
+            "id": "bb7a8eff-8a91-4138-aa7f-fa470a8cd780",
+            "cell_type": "markdown",
+            "source": "There are three ways of iterating over a dictionary.\n\n- `dictionary.keys()`\n- `dictionary.values()`\n- `dictionary.items()`",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "809abbef-8290-4f33-b090-ad696760019d": {
+            "id": "809abbef-8290-4f33-b090-ad696760019d",
+            "cell_type": "code",
+            "source": "for name in friends.keys():\n    print(name)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "Jack Bauer\nAlbert Einstein\nRichard Feynman\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 18
+        },
+        "0ee465e5-1789-4f70-bd07-351a5f9eaa22": {
+            "id": "0ee465e5-1789-4f70-bd07-351a5f9eaa22",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "e862622d-4fe1-493c-9688-0112be42a777",
+                        "805948d0-5e3c-44d8-b77e-83cbfa460fa2"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "e862622d-4fe1-493c-9688-0112be42a777": {
+            "id": "e862622d-4fe1-493c-9688-0112be42a777",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "851bb2d8-8526-4507-9e33-76095a665fd7"
+                    ]
+                }
+            }
+        },
+        "805948d0-5e3c-44d8-b77e-83cbfa460fa2": {
+            "id": "805948d0-5e3c-44d8-b77e-83cbfa460fa2",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "62f95b35-5f39-41fe-a44c-8f46766b2684"
+                    ]
+                }
+            }
+        },
+        "851bb2d8-8526-4507-9e33-76095a665fd7": {
+            "id": "851bb2d8-8526-4507-9e33-76095a665fd7",
+            "cell_type": "markdown",
+            "source": "We can iterate over the values.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "62f95b35-5f39-41fe-a44c-8f46766b2684": {
+            "id": "62f95b35-5f39-41fe-a44c-8f46766b2684",
+            "cell_type": "code",
+            "source": "for number in friends.values():\n    print(number)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "416-493-5200\n429-483-4950\n905-284-9068\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 19
+        },
+        "6e8a8de8-bc89-4195-b526-7627bf0f65fe": {
+            "id": "6e8a8de8-bc89-4195-b526-7627bf0f65fe",
+            "cell_type": "markdown",
+            "metadata": {
+                "journal": {
+                    "type": "row",
+                    "children": [
+                        "c430d3bd-8e23-4079-bff3-58014311c86c",
+                        "104dcab6-d902-4a1d-83aa-b47c950eb6bf"
+                    ],
+                    "layout": "left"
+                }
+            },
+            "source": "This is a row"
+        },
+        "c430d3bd-8e23-4079-bff3-58014311c86c": {
+            "id": "c430d3bd-8e23-4079-bff3-58014311c86c",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "f35058f2-6ee4-430b-8098-17e4872aaf29"
+                    ]
+                }
+            }
+        },
+        "104dcab6-d902-4a1d-83aa-b47c950eb6bf": {
+            "id": "104dcab6-d902-4a1d-83aa-b47c950eb6bf",
+            "cell_type": "markdown",
+            "source": "",
+            "metadata": {
+                "journal": {
+                    "type": "div",
+                    "children": [
+                        "1204fb60-e9d6-4a47-ad72-8a361bc1b184"
+                    ]
+                }
+            }
+        },
+        "f35058f2-6ee4-430b-8098-17e4872aaf29": {
+            "id": "f35058f2-6ee4-430b-8098-17e4872aaf29",
+            "cell_type": "markdown",
+            "source": "We can iterate over the (key, value) pairs in a dictionary.",
+            "metadata": {
+                "journal": {
+                    "type": "markdown",
+                    "format": "markdown",
+                    "imgPlacement": "above"
+                }
+            }
+        },
+        "1204fb60-e9d6-4a47-ad72-8a361bc1b184": {
+            "id": "1204fb60-e9d6-4a47-ad72-8a361bc1b184",
+            "cell_type": "code",
+            "source": "for (name, number) in friends.items():\n    print(name, number)",
+            "metadata": {
+                "journal": {
+                    "type": "code",
+                    "liveCode": false,
+                    "staticCode": false
+                }
+            },
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "text": "Jack Bauer 416-493-5200\nAlbert Einstein 429-483-4950\nRichard Feynman 905-284-9068\n",
+                    "output_type": "stream"
+                }
+            ],
+            "execution_count": 20
+        }
+    }
+}
